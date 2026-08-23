@@ -1,0 +1,12 @@
+---
+description: Git commit e PR — so sob pedido explicito
+alwaysApply: true
+---
+
+# Git e Pull Requests
+
+- So criar commits quando o usuario pedir.
+- Nunca atualizar git config; nunca --force em main/master sem aviso; nunca pular hooks sem pedido.
+- Ao commitar: em paralelo git status, git diff e git log; mensagem via HEREDOC focada no why.
+- Ao criar PR: usar gh; status/diff/log em paralelo; push -u se preciso; body com Summary e Test plan.
+- Nunca usar git -i (interativo).

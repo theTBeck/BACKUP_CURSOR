@@ -1,0 +1,51 @@
+{
+    "window.autoDetectColorScheme": false,
+    "window.systemColorTheme": "dark",
+    "workbench.preferredDarkColorTheme": "Default Dark Modern",
+    "cursor.composer.cmdPFilePicker2": true,
+    "workbench.colorTheme": "Default Dark Modern",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        }
+    },
+    "chat.tools.urls.autoApprove": {
+        "https://code.visualstudio.com": true,
+        "https://github.com/microsoft/vscode/wiki/*": true,
+        "https://github.com/github/github-mcp-server": true,
+        "https://github.com/github": true
+    },
+    "chat.mcp.access": "all",
+    "chat.mcp.autostart": "newAndOutdated",
+    "chat.mcp.apps.enabled": true,
+    "githubPullRequests.pullRequestDescription": "Copilot",
+    "githubPullRequests.createOnPublishBranch": "prompt",
+    "githubPullRequests.defaultMergeMethod": "squash",
+    "githubPullRequests.pullRequestTitle": "commit",
+    "githubIssues.queries": [
+        {
+            "label": "Minhas Issues",
+            "query": "is:open assignee:@me sort:updated-desc"
+        },
+        {
+            "label": "Criadas por mim",
+            "query": "is:open author:@me sort:updated-desc"
+        },
+        {
+            "label": "Mencionando mim",
+            "query": "is:open mentions:@me sort:updated-desc"
+        }
+    ],
+    "documentViewer.enableMd": false,
+    "documentViewer.enableCsv": false,
+    "documentViewer.enableExcel": false,
+    "documentViewer.enableWord": false,
+    "documentViewer.enablePdf": false,
+    "cursor.composer.queueMessageDefaultBehavior": "steer"
+}

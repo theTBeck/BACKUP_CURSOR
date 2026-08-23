@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${env:GITHUB_TOKEN}",
+        "X-MCP-Toolsets": "default,actions,code_security,dependabot,notifications,discussions,projects,labels",
+        "X-MCP-Insiders": "true",
+        "X-MCP-Features": "remote_mcp_ui_apps"
+      }
+    },
+    "chrome-devtools": {
+      "command": "pnpm",
+      "args": ["dlx", "chrome-devtools-mcp@latest"]
+    },
+    "playwright": {
+      "command": "pnpm",
+      "args": ["dlx", "@playwright/mcp@latest"]
+    },
+    "stitch": {
+      "command": "pnpm",
+      "args": ["dlx", "stitch-mcp-stdio"],
+      "env": {
+        "STITCH_API_KEY": "${env:STITCH_API_KEY}"
+      }
+    },
+    "higgsfield": {
+      "url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "kairogen": {
+      "command": "pnpm",
+      "args": ["dlx", "@kairogen/mcp"],
+      "env": {
+        "KAIROGEN_CONFIG_DIR": "C:\\Users\\USER\\.kairogen",
+        "KAIROGEN_API_KEY": "${env:KAIROGEN_API_KEY}"
+      }
+    }
+  }
+}

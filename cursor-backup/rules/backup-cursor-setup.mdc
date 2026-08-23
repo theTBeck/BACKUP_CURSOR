@@ -1,0 +1,70 @@
+---
+description: Backup completo do setup Cursor no repo privado BACKUP_CURSOR (sem secrets em claro)
+alwaysApply: true
+---
+
+# Backup Cursor → BACKUP_CURSOR
+
+Quando o usuario pedir backup do Cursor, ou apos commits que alterem o setup do Cursor (rules, MCP, agents, plugins, skills, settings), manter o repositorio GitHub **privado** `BACKUP_CURSOR` atualizado.
+
+## Objetivo
+
+1. Garantir que exista o repo GitHub **BACKUP_CURSOR** (criar se nao existir; **sempre private**).
+2. Gerar/atualizar um backup do setup Cursor do usuario TheMasterBECK.
+3. Fazer push do backup no repo quando houver mudancas reais.
+
+## O que incluir (ABSOLUTAMENTE TUDO, exceto secrets em claro)
+
+Copiar/espelhar, com estrutura clara sob `cursor-backup/`:
+
+| Fonte (Windows) | Destino no repo |
+|-----------------|-----------------|
+| `%USERPROFILE%\.cursor\rules\` | `cursor-backup/rules/` |
+| `%USERPROFILE%\.cursor\agents\` | `cursor-backup/agents/` |
+| `%USERPROFILE%\.cursor\skills-cursor\` | `cursor-backup/skills-cursor/` |
+| `%USERPROFILE%\.cursor\plugins\` (manifests/listas; sem caches gigantes) | `cursor-backup/plugins/` |
+| `%USERPROFILE%\.cursor\mcp.json` | `cursor-backup/mcp.json` (**sanitizado**) |
+| `%USERPROFILE%\.cursor\argv.json` | `cursor-backup/argv.json` |
+| `%APPDATA%\Cursor\User\settings.json` | `cursor-backup/user/settings.json` |
+| `%APPDATA%\Cursor\User\keybindings.json` | `cursor-backup/user/keybindings.json` |
+| `%APPDATA%\Cursor\User\snippets\` | `cursor-backup/user/snippets/` |
+| Lista de extensoes (`code`/`cursor` `--list-extensions`) | `cursor-backup/extensions.txt` |
+| `%USERPROFILE%\.claude\skills\` (skills do usuario) | `cursor-backup/claude-skills/` |
+| Hooks/rules de projeto relevantes se o usuario pedir | `cursor-backup/project-hooks/` |
+| User rules / agent transcripts metadata (sem PII sensivel desnecessaria) | `cursor-backup/meta/` |
+
+Tambem incluir um manifesto `BACKUP_MANIFEST.md` com: data UTC, hostname, pastas incluidas, itens omitidos e motivo.
+
+## Seguranca (OBRIGATORIO — nunca quebrar)
+
+- **NUNCA** commitar API keys, tokens, cookies, Authorization headers, `.env`, credenciais ou secrets em texto claro.
+- Em `mcp.json` e configs: substituir valores secretos por placeholders `${env:NOME_DA_VAR}` ou `***REDACTED***`.
+- Preferir referencias a variaveis de ambiente; se achar secret hardcoded na origem, redigir no backup e avisar o usuario para rotacionar e migrar para env.
+- Repo **sempre private**. Nao tornar publico.
+- Nao incluir `workspaceStorage`, `History`, caches, heapsnapshots, nem bancos locais com dados de sessao.
+- Antes do commit: varrer o staging por padroes de secret (`sk-`, `Bearer `, `api_key`, `AQ.`, tokens longos) e bloquear o push se encontrar.
+
+## Fluxo operacional
+
+```
+1. gh repo view OWNER/BACKUP_CURSOR || gh repo create BACKUP_CURSOR --private --description "Backup sanitizado do setup Cursor"
+2. Clonar/atualizar working copy local do BACKUP_CURSOR
+3. Sincronizar fontes → cursor-backup/ (com redaction)
+4. Atualizar BACKUP_MANIFEST.md e timestamp
+5. Se git status mostrar mudancas: commit + push
+6. Se nao houver mudancas: nao criar commit vazio
+```
+
+Mensagem de commit sugerida: `chore(backup): sync Cursor setup YYYY-MM-DD`.
+
+## Quando atualizar
+
+- Pedido explicito do usuario ("backup cursor", "atualizar BACKUP_CURSOR").
+- Apos commit local que altere rules/MCP/agents/plugins/skills/settings do Cursor — **somente se necessario** (houve diff real no backup sanitizado).
+- Nao rodar backup em loop a cada mensagem trivial.
+
+## O que NAO fazer
+
+- Nao pedir nem gravar secrets "para completar o backup".
+- Nao usar gist/pastebin/host publico.
+- Nao fazer `git commit` em outros repos sem pedido explicito do usuario (esta rule so autoriza commits no `BACKUP_CURSOR`).

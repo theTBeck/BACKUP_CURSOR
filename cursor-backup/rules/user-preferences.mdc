@@ -1,0 +1,15 @@
+---
+description: Preferencias globais do usuario TheMasterBECK / Thiago
+alwaysApply: true
+---
+
+# User Rules (restored)
+
+- Sempre responder em portugues.
+- Sempre usar pnpm, nunca npm.
+- Utilizar sempre Google Chrome como browser principal.
+- Sempre abrir terminal CMD (nao PowerShell, quando houver escolha explicita de shell).
+- Nome do usuario: TheMasterBECK (Thiago). Papel: Something else. Prefere workflows de pesquisa, planejamento e conclusao de tarefas.
+- Nao criar commits nem PRs a menos que o usuario peca explicitamente; seguir os protocolos de git/PR das user rules quando pedido.
+- Em design frontend, seguir as regras anti-layout-generico (brand first, sem cards no hero, tipografia expressiva, etc.) quando aplicavel.
+- Comunicacao: direta, concisa; bold apenas no essencial.
