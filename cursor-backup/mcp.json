@@ -18,22 +18,14 @@
       "args": ["dlx", "@playwright/mcp@latest"]
     },
     "stitch": {
-      "command": "pnpm",
-      "args": ["dlx", "stitch-mcp-stdio"],
+      "command": "C:\\Users\\USER\\.cursor\\bin\\stitch-mcp.cmd",
+      "args": [],
       "env": {
         "STITCH_API_KEY": "${env:STITCH_API_KEY}"
       }
     },
     "higgsfield": {
       "url": "https://mcp.higgsfield.ai/mcp"
-    },
-    "kairogen": {
-      "command": "pnpm",
-      "args": ["dlx", "@kairogen/mcp"],
-      "env": {
-        "KAIROGEN_CONFIG_DIR": "C:\\Users\\USER\\.kairogen",
-        "KAIROGEN_API_KEY": "${env:KAIROGEN_API_KEY}"
-      }
     }
   }
 }

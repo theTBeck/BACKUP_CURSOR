@@ -1,0 +1,11 @@
+{
+  "_comment": "Kairogen desligado sob ordem de TheMasterBECK (2026-08-22). Reativar: copiar bloco kairogen de volta para mcp.json e reiniciar MCP.",
+  "kairogen": {
+    "command": "pnpm",
+    "args": ["dlx", "@kairogen/mcp"],
+    "env": {
+      "KAIROGEN_CONFIG_DIR": "C:\\Users\\USER\\.kairogen",
+      "KAIROGEN_API_KEY": "${env:KAIROGEN_API_KEY}"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "_meta": {
+    "updated": "2026-08-22",
+    "note": "Pacotes MCP/CLI instalados via pnpm global mas NÃO ativos em mcp.json. Ativar sob diretiva explícita de TheMasterBECK (copiar bloco para mcp.json e reiniciar MCP).",
+    "kairogen": "ver mcp.kairogen.disabled.json"
+  },
+  "candidates": {
+    "photoshop": {
+      "command": "pnpm",
+      "args": ["exec", "@bubblydoo/photoshop-mcp"],
+      "notes": "Requer Photoshop aberto + Flue/bridge se usar skill flue"
+    },
+    "premiere": {
+      "command": "pnpm",
+      "args": ["exec", "premiere-pro-mcp"],
+      "notes": "Premiere Pro MCP global instalado"
+    },
+    "adobe-express": {
+      "command": "pnpm",
+      "args": ["exec", "@adobe/express-developer-mcp"],
+      "notes": "Adobe Express developer MCP"
+    },
+    "notebooklm": {
+      "command": "pnpm",
+      "args": ["exec", "@roomi-fields/notebooklm-mcp"],
+      "notes": "NotebookLM — útil com pesquisa/editorial"
+    },
+    "seedance": {
+      "command": "pnpm",
+      "args": ["exec", "@runapi.ai/seedance-mcp"],
+      "notes": "Geração de vídeo Seedance — precisa API key"
+    },
+    "nano-banana": {
+      "command": "pnpm",
+      "args": ["exec", "@seungmanchoi/nano-banana-mcp"],
+      "notes": "Imagem nano-banana — precisa API key"
+    },
+    "mercadopago": {
+      "command": "pnpm",
+      "args": ["exec", "@theyahia/mercadopago-mcp"],
+      "notes": "Pagamentos — VENDAS-Digital"
+    },
+    "melhor-envio": {
+      "command": "pnpm",
+      "args": ["exec", "@codespar/mcp-melhor-envio"],
+      "notes": "Frete — e-commerce"
+    },
+    "bling": {
+      "command": "pnpm",
+      "args": ["exec", "bling-mcp"],
+      "notes": "ERP Bling — e-commerce BR"
+    },
+    "tmdb": {
+      "command": "pnpm",
+      "args": ["exec", "tmdb-mcp"],
+      "notes": "The Movie DB — útil p/ film skills"
+    },
+    "context-mode": {
+      "command": "pnpm",
+      "args": ["exec", "context-mode"],
+      "notes": "Context compression / mode — já em ~/.vscode e pnpm global"
+    }
+  },
+  "cli_only_not_mcp": [
+    "@canva/cli",
+    "capcut-cli",
+    "@higgsfield/cli",
+    "@google/gemini-cli",
+    "@vivliostyle/cli",
+    "@adobe/create-ccweb-add-on",
+    "@adobe/uxp-devtools-cli",
+    "rtk (Rust Token Killer) @ ~/.local/bin/rtk.exe"
+  ],
+  "marketplace_guess_forgotten_name": [
+    "Google Gmail (Cursor Marketplace — Workspace suite Aug 2026)",
+    "Google Calendar (Cursor Marketplace — Workspace suite Aug 2026)",
+    "Stitch skills plugins (stitch-design / stitch-build / stitch-utilities)"
+  ]
+}

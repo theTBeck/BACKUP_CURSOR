@@ -1,0 +1,24 @@
+---
+description: Diretivas de stack Cursor — Kairogen off, Stitch diário, Actionize arquivado
+alwaysApply: true
+---
+
+# Stack Cursor — diretivas TheMasterBECK (2026-08-22)
+
+## Kairogen
+- **DESLIGADO** até segunda ordem.
+- Config preservada em `~/.cursor/mcp.kairogen.disabled.json`.
+- Não sugerir reativar, refresh de token ou instalação.
+
+## Stitch (fluxo diário)
+- MCP `stitch` ativo em `~/.cursor/mcp.json`.
+- Launcher: `~/.cursor/bin/stitch-mcp.cmd`.
+- Slash command: `/stitch-diario` → pipeline design-md → enhance-prompt → stitch-loop.
+- Skills: `~/.claude/skills/stitch/`.
+
+## Actionize
+- **ARQUIVADO**. Ver `actionize-archived.mdc`.
+- Só sob diretiva explícita de TheMasterBECK.
+
+## Agents
+- `gatona`, `patroa`, `querida` em `~/.cursor/agents/` (espelho de `~/.claude/agents/`).

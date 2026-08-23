@@ -1,0 +1,18 @@
+---
+description: Actionize arquivado — só ativar sob diretiva explícita de TheMasterBECK
+alwaysApply: true
+---
+
+# Actionize — ARQUIVADO
+
+O skill `actionize` (Telegram/cron/Infranodus) está **arquivado**.
+
+## Regra
+
+- **NÃO** invocar, sugerir, instalar deps (Infranodus MCP, Telegram bot, cron) nem rodar `/actionize`.
+- **NÃO** criar planos `.plan/` via actionize.
+- Reativar **somente** se TheMasterBECK disser explicitamente: "ativar actionize" / "desarquivar actionize" / diretiva equivalente com o nome Actionize.
+
+## Alternativa operacional
+
+Para planos sem Telegram: usar planning em markdown no repo ou skills de planning sem cron externo.
