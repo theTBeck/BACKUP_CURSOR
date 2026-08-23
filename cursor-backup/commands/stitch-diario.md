@@ -7,9 +7,10 @@ description: Pipeline diário Stitch — design → prompt → loop → React (a
 Execute o pipeline Stitch completo para o projeto atual. Fluxo diário obrigatório de TheMasterBECK.
 
 ## Pré-requisitos
-1. Confirmar MCP `user-stitch` / `stitch` disponível (GetDynamicTools). Se offline: reiniciar MCP no Cursor Settings e checar `STITCH_API_KEY` no Ambiente do Usuário Windows.
-2. Abrir skill bundle `~/.claude/skills/stitch/SKILL.md` e seguir o protocolo de orquestração.
-3. Preferir Chrome como browser; terminal CMD; package manager pnpm.
+1. Autorun de prompt skills: aplicar `/prompt-skills-autorun` (prompt-engineering + enhance-prompt) antes de qualquer geracao.
+2. Confirmar MCP `user-stitch` / `stitch` (GetDynamicTools). Se offline: re-registrar com `cursor --add-mcp` + teste API (`~/.cursor/bin/test-stitch-api.js`) — agente executa, nao pede ao usuario.
+3. Abrir skill bundle `~/.claude/skills/stitch/SKILL.md` e seguir o protocolo de orquestração.
+4. Preferir Chrome; terminal CMD; pnpm.
 
 ## Autorun (ordem fixa)
 1. **design-md** — Se não existir `DESIGN.md` no projeto, extrair/criar design system.
@@ -24,7 +25,7 @@ Execute o pipeline Stitch completo para o projeto atual. Fluxo diário obrigató
 - Uma mudança de UI por vez em edições pontuais.
 - Não inventar cores fora do DESIGN.md.
 - Não instalar npm; usar pnpm.
-- Se Stitch MCP falhar: reportar status, sugerir `C:\Users\USER\.cursor\bin\stitch-mcp.cmd` e reinício do Cursor; não fingir sucesso.
+- Se Stitch MCP falhar: agente tenta `cursor --add-mcp`, launcher e teste API; reporta causa; nao fingir sucesso; nao pedir Restart manual.
 - Kairogen permanece DESLIGADO até nova ordem.
 - Actionize permanece ARQUIVADO até diretiva explícita de TheMasterBECK.
 

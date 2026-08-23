@@ -1,0 +1,45 @@
+---
+description: Autorun obrigatorio — sempre acionar prompt-engineering + enhance-prompt
+alwaysApply: true
+---
+
+# Autorun: prompt-engineering + enhance-prompt
+
+## Lei (todos os chats)
+
+**SEMPRE**, no inicio de cada tarefa (antes de implementar ou responder o entregavel):
+
+1. Acionar mentalmente / carregar os skills:
+   - `~/.claude/skills/prompt-engineering/SKILL.md`
+   - `~/.claude/skills/stitch/enhance-prompt/SKILL.md`
+2. Aplicar os dois no raciocinio e na saida.
+3. Informar brevemente que o autorun de prompt skills esta ativo (1 linha).
+
+Nao esperar o usuario digitar `/prompt-engineering` ou `/enhance-prompt`.
+
+## O que aplicar
+
+### prompt-engineering (sempre)
+- Estrutura: Role/Context + Task + Constraints + Output Format
+- Clareza de tarefa, constraints, formato de saida
+- Evitar vagueza, conflito e prompts longos sem prioridade
+
+### enhance-prompt (sempre; intensificar em UI/Stitch)
+- Plataforma, tipo de pagina, estrutura numerada, vibe, cores com roles
+- Keywords de UI concretos (nav, CTA, hero, form…)
+- Se existir `DESIGN.md`, incorporar DESIGN SYSTEM (REQUIRED)
+- Edits: uma mudanca por vez
+
+## Autorun operacional
+
+- Command: `/prompt-skills-autorun`
+- Rule: este arquivo (`alwaysApply: true`)
+- Em pipelines Stitch: combinar com `/stitch-diario`
+
+## Anti-padroes
+
+```
+❌ Responder sem estruturar o pedido
+❌ Pedir ao usuario para “usar o skill X”
+❌ Ignorar enhance-prompt em pedidos de UI/landing/dashboard
+```
