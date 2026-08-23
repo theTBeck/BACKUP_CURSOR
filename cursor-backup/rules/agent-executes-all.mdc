@@ -1,0 +1,32 @@
+---
+description: Agente executa todas as acoes — nunca pedir TheMasterBECK para fazer passos manuais
+alwaysApply: true
+---
+
+# Execucao pelo Agente — TheMasterBECK
+
+## Lei
+
+**PROIBIDO** pedir que TheMasterBECK execute acoes manuais (Settings, Restart MCP, cliques, OAuth “faca voce”, comandos no terminal, Reload Window, instalar plugin no UI, etc.).
+
+**OBRIGATORIO:** o agente executa. Se algo exigir UI/OAuth do usuario, o agente inicia o fluxo (deeplink, `mcp_auth`, `cursor --add-mcp`, scripts, browser) e so pede confirmacao quando o sistema bloquear de forma incontornavel (ex.: cartao de aprovacao nativo / login Google no browser ja aberto pelo agente).
+
+## Durante a resposta
+
+1. **Informar sempre** quais acoes estao sendo executadas (lista curta, em portugues, antes/durante as tool calls).
+2. Preferir automacao: Shell/CMD, `cursor` CLI, MCP `mcp_auth`, Playwright/Chrome, edicao de `mcp.json`/rules/files.
+3. Nao encerrar com “faca X no Settings”. Encerrar com o que **ja foi feito** e o que **falhou com causa** + proxima tentativa automatica.
+
+## Exemplos
+
+```
+❌ “Va em Settings → MCP → Restart stitch”
+✅ “Reiniciando Stitch via mcp.json + cursor --add-mcp + teste API…”
+
+❌ “Instale Gmail no Marketplace”
+✅ “Registrando Gmail com --add-mcp e autenticando via mcp_auth…”
+```
+
+## Escopo
+
+Sempre ativo em todas as sessoes. Sobrescreve habitos de “pedir ao usuario o passo final”.

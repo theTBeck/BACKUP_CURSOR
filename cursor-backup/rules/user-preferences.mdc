@@ -13,3 +13,4 @@ alwaysApply: true
 - Nao criar commits nem PRs a menos que o usuario peca explicitamente; seguir os protocolos de git/PR das user rules quando pedido.
 - Em design frontend, seguir as regras anti-layout-generico (brand first, sem cards no hero, tipografia expressiva, etc.) quando aplicavel.
 - Comunicacao: direta, concisa; bold apenas no essencial.
+- **Agente executa tudo** — nunca pedir TheMasterBECK para acoes manuais; ver `agent-executes-all.mdc`. Sempre informar quais acoes estao em curso.
