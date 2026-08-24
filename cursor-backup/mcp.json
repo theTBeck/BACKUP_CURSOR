@@ -11,21 +11,73 @@
     },
     "chrome-devtools": {
       "command": "pnpm",
-      "args": ["dlx", "chrome-devtools-mcp@latest"]
+      "args": [
+        "dlx",
+        "chrome-devtools-mcp@latest"
+      ]
     },
     "playwright": {
       "command": "pnpm",
-      "args": ["dlx", "@playwright/mcp@latest"]
+      "args": [
+        "dlx",
+        "@playwright/mcp@latest"
+      ]
     },
     "stitch": {
-      "command": "C:\\Users\\USER\\.cursor\\bin\\stitch-mcp.cmd",
-      "args": [],
+      "command": "C:\\Users\\USER\\AppData\\Roaming\\npm\\pnpm.cmd",
+      "args": [
+        "dlx",
+        "stitch-mcp-stdio"
+      ],
       "env": {
-        "STITCH_API_KEY": "${env:STITCH_API_KEY}"
+        "STITCH_***REDACTED***
       }
     },
     "higgsfield": {
       "url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "gmail": {
+      "url": "https://gmailmcp.googleapis.com/mcp/v1"
+    },
+    "google-calendar": {
+      "url": "https://calendarmcp.googleapis.com/mcp/v1"
+    },
+    "premiere": {
+      "command": "pnpm",
+      "args": [
+        "dlx",
+        "premiere-pro-mcp"
+      ]
+    },
+    "notebooklm": {
+      "command": "pnpm",
+      "args": [
+        "dlx",
+        "@roomi-fields/notebooklm-mcp"
+      ]
+    },
+    "mercadopago": {
+      "command": "pnpm",
+      "args": [
+        "dlx",
+        "@theyahia/mercadopago-mcp"
+      ]
+    },
+    "capcut": {
+      "command": "node",
+      "args": [
+        "C:\\inteligencia-artificial\\CONNECTIONS\\repos\\CapCut-Draft-MCP\\src\\server.js"
+      ],
+      "env": {
+        "CAPCUT_DRAFTS_DIR": "C:\\Users\\USER\\AppData\\Local\\CapCut\\User Data\\Projects\\com.lveditor.draft",
+        "CAPCUT_TEMPLATE_DRAFT": "dop-reel-v5"
+      }
+    },
+    "capcut-api": {
+      "url": "http://localhost:9001/mcp"
+    },
+    "google-drive": {
+      "url": "https://drivemcp.googleapis.com/mcp/v1"
     }
   }
 }

@@ -1,0 +1,19 @@
+---
+description: Todo arquivo e pasta novos devem ser criados em C:\inteligencia-artificial
+alwaysApply: true
+---
+
+# Raiz obrigatória de arquivos
+
+- **Raiz única:** `C:\inteligencia-artificial`
+- Todo arquivo, pasta, relatório, canvas, script ou artefato **novo** deve ser criado **dentro** dessa raiz (subpastas permitidas).
+- **Proibido** gravar em: Desktop, Downloads, Temp do Cursor (`AppData\Local\Temp`), `~/.cursor/projects/...` (exceto se for cópia espelho **depois** de salvar na raiz).
+- Antes de criar algo: garantir que `C:\inteligencia-artificial` (e a subpasta do projeto) exista.
+- Relatórios OSINT, `.md`, `.canvas.tsx` e entregas: sob `C:\inteligencia-artificial\<projeto>\`.
+- Canvases Cursor: `C:\inteligencia-artificial\<projeto>\canvases\*.canvas.tsx` quando o workspace for essa árvore.
+
+```text
+✅ C:\inteligencia-artificial\OSINT-Thiago-Beck\relatorio.md
+❌ C:\Users\USER\Desktop\relatorio.md
+❌ ...\AppData\Local\Temp\...\relatorio.md
+```

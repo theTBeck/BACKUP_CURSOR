@@ -1,0 +1,29 @@
+---
+description: Separação obrigatória TheMasterBECK vs ops Cursor em repos-cursor (alwaysApply)
+alwaysApply: true
+---
+
+# Repos locais — raiz vs repos-cursor
+
+## Lei
+
+1. **Ops sistema Cursor / Agent:** `C:\inteligencia-artificial\repos-cursor\` — **OBRIGATÓRIO** (sem exceção).
+2. **Projetos TheMasterBECK:** `C:\inteligencia-artificial\<projeto>\` (lista explícita na regra `cursor-ops-repos-cursor.mdc`).
+3. Antes de criar path: se for ops Cursor/Agent → só sob `repos-cursor\`.
+
+## Junções (não apagar)
+
+- `.cursor` → `repos-cursor\.cursor`
+- `.vscode` → `repos-cursor\.vscode`
+- `bin` → `repos-cursor\bin`
+
+## Exemplos
+
+```text
+✅ C:\inteligencia-artificial\repos-cursor\analises-repos\
+✅ C:\inteligencia-artificial\AMPA-LIVRO\
+❌ C:\inteligencia-artificial\novo-ops-agent\
+❌ C:\Users\USER\Desktop\clone-agent\
+```
+
+Delegar a `repos-cursor-guardian` de forma proativa.

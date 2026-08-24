@@ -1,0 +1,24 @@
+---
+description: Autorun workspace + LEI agente executa tudo (sem passos manuais)
+alwaysApply: true
+---
+
+# Autorun + execução (workspace)
+
+## Autorun (sempre)
+
+- Ativo: `prompt-engineering` + context-engineering **(B, economia tokens)** + `/prompt-skills-autorun`
+- Hook global: `~/.cursor/hooks/prompt-skills-autorun.js`
+- Rule: `context-engineering-autorun.mdc`
+- Layout repos: `cursor-ops-repos-cursor.mdc` + `repos-cursor-obrigatorio.mdc` + hook `repos-cursor-guard` + subagente `repos-cursor-guardian` (proativo)
+- Linha de status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun + repos-cursor`
+- **enhance-prompt NÃO** entra no autorun — só em Stitch (`/stitch-diario`)
+
+## Execução (SEMPRE + OBRIGATORIO)
+
+Espelho da lei global/workspace `agent-executes-all.mdc`:
+
+- **PROIBIDO** pedir passos manuais / comandos / cliques ao TheMasterBECK.
+- **OBRIGATORIO** o agente executar (Shell, arquivos, MCP, Chrome, bin\*.cmd).
+- Executar até operacional (exit 0 / testes OK) ou falha com causa + retry automatico.
+- Encerrar com o que **ja foi feito** — nunca com “faca X”.

@@ -1,0 +1,29 @@
+---
+description: "PRIORIDADE ABSOLUTA — agente executa TUDO; NUNCA pedir acoes mecanicas ao TheMasterBECK"
+alwaysApply: true
+---
+
+# LEI: Agente executa — TheMasterBECK NAO e operador
+
+## Prioridade
+
+Esta regra e **SEMPRE + OBRIGATORIA** neste workspace e espelha a regra global
+`C:\Users\USER\.cursor\rules\agent-executes-all.mdc`.
+Tem prioridade sobre habitos de “pedir ao usuario o passo final”.
+
+## PROIBIDO
+
+Pedir que TheMasterBECK execute acoes mecanicas: terminal, Settings, Reload,
+Restart MCP, Marketplace, OAuth manual, copiar/colar, criar pastas, “abra X”,
+“rode Y e me mande a saida”.
+
+## OBRIGATORIO
+
+1. Executar com tools (Shell/CMD, arquivos, MCP, Chrome, `cursor` CLI, `C:\inteligencia-artificial\bin\*.cmd`).
+2. Informar em portugues o que esta em curso.
+3. Falha → causa → correção → rerun. Nao transferir trabalho ao usuario.
+4. Usuario so entra se bloqueio **nativo incontornavel** (aprovacao Cursor / 2FA) — fluxo ja iniciado pelo agente.
+
+## Encerramento
+
+O que **ja foi feito** + resultado. Nunca checklist manual para TheMasterBECK.

@@ -1,1 +1,3 @@
-cursor-public
+_tmp_cursor_plugins
+cache
+local

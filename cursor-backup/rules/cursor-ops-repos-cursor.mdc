@@ -1,0 +1,35 @@
+---
+description: LEI FIRMADA — todo repo/arquivo operacional do sistema Cursor vai em repos-cursor (alwaysApply+autorun)
+alwaysApply: true
+---
+
+# LEI: Cursor ops → repos-cursor
+
+## Cravado (sempre + autorun)
+
+**A PARTIR DE AGORA** todos os repositórios e arquivos **operacionais do sistema Cursor** (Agent, hooks, rules, bin, bridges, audits, clones Agent, scripts OmniRoute, dumps ops) **DEVEM** ser guardados em:
+
+`C:\inteligencia-artificial\repos-cursor\`
+
+## Obrigatório
+
+```text
+✅ C:\inteligencia-artificial\repos-cursor\<qualquer-ops-cursor>\
+✅ Junções raiz .cursor / .vscode / bin → repos-cursor\...
+```
+
+```text
+❌ Novo ops Cursor solto na raiz C:\inteligencia-artificial\
+❌ Desktop / Downloads / Temp / Documents\GitHub / AppData\Local\Temp
+```
+
+## Exceção (TheMasterBECK — projetos dele)
+
+Projetos do TheMasterBECK podem permanecer na raiz: `AMPA-LIVRO`, `CINEBECK-REEL`, `DoPSite-RV`, `DoPSite-RV_legacy`, `Marketing-Digital`, `PROD-VIDIGA`, `BACKUP_CURSOR`.
+
+## Autorun
+
+- `alwaysApply: true` (esta regra)
+- Hook: `repos-cursor-guard` (sessionStart + preToolUse)
+- Subagente: `repos-cursor-guardian` (proativo)
+- Status: incluir `repos-cursor` no autorun da sessão

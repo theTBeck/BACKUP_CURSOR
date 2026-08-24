@@ -6,6 +6,7 @@
 **/credentials*
 **/*secret*
 **/*token*
+_secret-scan.txt
 
 # Local noise
 .DS_Store
@@ -16,3 +17,4 @@ cache/
 History/
 workspaceStorage/
 *.heapsnapshot
+cursor-backup/hooks/state/

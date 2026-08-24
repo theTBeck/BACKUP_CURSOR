@@ -1,0 +1,51 @@
+---
+description: Viewer ao lado obrigatório para abrir/visualizar qualquer tipo e formato de arquivo
+alwaysApply: true
+---
+
+# Viewer lateral obrigatório (qualquer formato)
+
+## Diretiva
+
+Sempre que o agente criar, citar, analisar ou entregar um arquivo, o **viewer ao lado do chat** deve estar **possível e acionável** — nunca dizer que “não dá para abrir” um formato.
+
+## Como abrir (ordem de preferência)
+
+1. **Link absoluto clicável** no chat (`[nome](C:\inteligencia-artificial\...)`) para o TheMasterBECK abrir ao lado.
+2. **Ferramenta Read** (texto, código, imagens jpeg/png/gif/webp).
+3. **Canvas** (`.canvas.tsx`) para artefato visual/analítico interativo ao lado do chat.
+4. **Chrome** (MCP `user-chrome-devtools` / `user-playwright`) para HTML, URLs e previews web.
+5. **Extensões de viewer** já no host:
+   - `battlecook.omni-viewer` — áudio, vídeo, PDF, Office, CSV, Parquet, PSD, GGUF, etc.
+   - `syncfusioninc.document-viewer-vscode-extensions` — documentos
+   - preview nativo Cursor — imagens SVG/PNG/JPG/WebP
+   - `bierner.github-markdown-preview` — Markdown
+
+## Mapa rápido de formatos
+
+| Tipo | Viewer |
+|---|---|
+| Código / texto / config | Editor + link absoluto |
+| Imagem | Read + preview nativo / Omni |
+| PDF / DOCX / XLSX / PPTX | Omni ou Syncfusion |
+| Áudio / vídeo | Omni Viewer |
+| CSV / Parquet / JSONL | Omni Viewer |
+| HTML / URL | Chrome (obrigatório como browser principal) |
+| Análise estruturada | Canvas em `C:\inteligencia-artificial\<projeto>\canvases\` |
+| Binário desconhecido | Metadados + hex/assinatura; abrir via Omni se suportado; senão, extrair o que for legível |
+
+## Regras de execução
+
+- **Proibido** pedir ao TheMasterBECK que “abra manualmente” sem link/caminho pronto.
+- Artefatos novos: raiz `C:\inteligencia-artificial\<projeto>\` (ver `workspace-root`).
+- Após criar arquivo visualizável: informar caminho + link; se for canvas, link `.canvas.tsx`.
+- Se o viewer falhar: diagnosticar extensão/`Read`/Chrome, corrigir e **rerodar** até abrir ou causa bloqueante explícita.
+
+## Exemplos
+
+```text
+✅ [relatorio.pdf](C:\inteligencia-artificial\meu-agente\fixtures\viewer\sample.pdf)
+✅ Canvas ao lado: [viewer-smoke](C:\inteligencia-artificial\meu-agente\canvases\viewer-smoke.canvas.tsx)
+❌ "Não consigo visualizar esse arquivo / formato"
+❌ Entregar só o nome do arquivo sem caminho absoluto clicável
+```

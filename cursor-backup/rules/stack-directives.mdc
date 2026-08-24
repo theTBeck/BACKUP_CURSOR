@@ -5,11 +5,18 @@ alwaysApply: true
 
 # Stack Cursor — diretivas TheMasterBECK (2026-08-22)
 
+## Execucao (PRIORIDADE ABSOLUTA)
+- **NUNCA** pedir TheMasterBECK para acoes mecanicas.
+- Rule: `agent-executes-all.mdc` (`alwaysApply`) + injecao no hook `sessionStart`.
+
 ## Prompt skills (autorun global)
-- **SEMPRE ativos:** prompt-engineering + enhance-prompt
+- **SEMPRE ativos:** prompt-engineering + context-engineering (B, economia tokens) + `/prompt-skills-autorun`
+- Status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun`
+- **FORA do autorun:** enhance-prompt (somente Stitch / `/stitch-diario`)
 - Rule: `prompt-skills-autorun.mdc`
 - Command: `/prompt-skills-autorun`
-- Hook: `sessionStart` → `hooks/prompt-skills-autorun.js`
+- Hook: `sessionStart` → `hooks/prompt-skills-autorun.js` (+ guard `afterAgentResponse`/`stop` em `agent-executes-*.js`)
+- Controle: subagente `patroa`; herança nos 5 `~/.cursor/agents/*.md`
 
 ## Kairogen
 - **DESLIGADO** até segunda ordem.
@@ -17,7 +24,7 @@ alwaysApply: true
 
 ## Stitch (fluxo diário)
 - MCP `stitch` via `pnpm.cmd dlx stitch-mcp-stdio` + `STITCH_API_KEY`
-- Slash: `/stitch-diario` (ja inclui enhance-prompt no pipeline)
+- Slash: `/stitch-diario` (aqui sim: enhance-prompt no pipeline)
 - Skills: `~/.claude/skills/stitch/`
 
 ## Google Workspace

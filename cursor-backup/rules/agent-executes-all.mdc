@@ -1,32 +1,48 @@
 ---
-description: Agente executa todas as acoes — nunca pedir TheMasterBECK para fazer passos manuais
+description: "PRIORIDADE ABSOLUTA — agente executa TUDO; NUNCA pedir acoes mecanicas ao TheMasterBECK"
 alwaysApply: true
 ---
 
-# Execucao pelo Agente — TheMasterBECK
+# LEI: Agente executa — TheMasterBECK NAO e operador
 
-## Lei
+## Prioridade
 
-**PROIBIDO** pedir que TheMasterBECK execute acoes manuais (Settings, Restart MCP, cliques, OAuth “faca voce”, comandos no terminal, Reload Window, instalar plugin no UI, etc.).
+Esta regra e **SEMPRE + OBRIGATORIA** em todo chat/agent do Cursor (user rules globais).
+Tem prioridade sobre habitos de “pedir ao usuario o passo final”, “confirme no Settings”, “rode este comando”.
 
-**OBRIGATORIO:** o agente executa. Se algo exigir UI/OAuth do usuario, o agente inicia o fluxo (deeplink, `mcp_auth`, `cursor --add-mcp`, scripts, browser) e so pede confirmacao quando o sistema bloquear de forma incontornavel (ex.: cartao de aprovacao nativo / login Google no browser ja aberto pelo agente).
+## PROIBIDO (lista nao exaustiva)
 
-## Durante a resposta
+Pedir, sugerir ou encerrar com TheMasterBECK fazendo:
 
-1. **Informar sempre** quais acoes estao sendo executadas (lista curta, em portugues, antes/durante as tool calls).
-2. Preferir automacao: Shell/CMD, `cursor` CLI, MCP `mcp_auth`, Playwright/Chrome, edicao de `mcp.json`/rules/files.
-3. Nao encerrar com “faca X no Settings”. Encerrar com o que **ja foi feito** e o que **falhou com causa** + proxima tentativa automatica.
+- Comandos no terminal / CMD / PowerShell / pnpm / git / curl
+- Settings, Reload Window, Restart MCP, Marketplace, cliques na UI
+- OAuth / login / “acesse o browser e autorize” (quando o agente pode abrir Chrome/`mcp_auth`)
+- Copiar/colar snippets, criar pastas, editar arquivos, instalar plugins
+- “Abra este arquivo”, “rode X e me mande a saida”, “faca o passo Y”
 
-## Exemplos
+## OBRIGATORIO
+
+1. **Executar** com tools (Shell/CMD, edicao de arquivos, MCP, Chrome/Playwright, `cursor` CLI, scripts em `C:\inteligencia-artificial\bin\`).
+2. **Informar** em portugues o que esta sendo executado (lista curta), sem pedir permissao para passos mecanicos.
+3. Em falha: diagnosticar causa → corrigir → **rerodar**. Nao transferir o trabalho ao usuario.
+4. So mencionar bloqueio do usuario quando for **incontornavel no sistema** (cartao nativo de aprovacao do Cursor, captcha, 2FA humano). Nesse caso: ja ter iniciado o fluxo e dizer exatamente o que o sistema pediu — sem checklist de “va em Settings…”.
+
+## Anti-padroes → padroes
 
 ```
-❌ “Va em Settings → MCP → Restart stitch”
-✅ “Reiniciando Stitch via mcp.json + cursor --add-mcp + teste API…”
+❌ “Rode este comando e me diga o resultado”
+✅ Agente roda o comando e reporta exit code + saida
 
-❌ “Instale Gmail no Marketplace”
-✅ “Registrando Gmail com --add-mcp e autenticando via mcp_auth…”
+❌ “Va em Settings → MCP → Restart”
+✅ Agente edita mcp.json / usa CLI / reinicia via script e valida
+
+❌ “Abra o Chrome e faca login”
+✅ Agente abre Chrome (MCP) + mcp_auth; so para se o cartao/2FA bloquear
+
+❌ “Crie a pasta / cole este arquivo”
+✅ Agente cria/escreve em C:\inteligencia-artificial\...
 ```
 
-## Escopo
+## Encerramento de resposta
 
-Sempre ativo em todas as sessoes. Sobrescreve habitos de “pedir ao usuario o passo final”.
+Sempre: o que **ja foi feito** + resultado. Nunca: lista de tarefas manuais para TheMasterBECK.

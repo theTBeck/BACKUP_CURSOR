@@ -1,23 +1,24 @@
 # BACKUP_MANIFEST
 
-- **Date (local):** 2026-08-22
+- **Date (local):** 2026-08-24 11:29 -0300
+- **Date (UTC):** 2026-08-24T14:29:26Z
 - **Owner:** TheMasterBECK / theTBeck
 - **Repo:** https://github.com/theTBeck/BACKUP_CURSOR (private)
-- **Host path:** `C:\Users\USER\BACKUP_CURSOR`
+- **Host path:** `C:\inteligencia-artificial\BACKUP_CURSOR`
 
 ## Included
 
 | Path | Notes |
 |------|--------|
-| `cursor-backup/rules/` | Global `.mdc` rules including `backup-cursor-setup.mdc` |
+| `cursor-backup/rules/` | Global `.mdc` rules |
+| `cursor-backup/agents/` | User agents/subagents |
+| `cursor-backup/hooks/` + `hooks.json` | Global Cursor hooks (autorun + repos-cursor-guard) |
+| `cursor-backup/project-hooks/` | Workspace ops under repos-cursor/.cursor |
 | `cursor-backup/skills-cursor/` | Cursor built-in/agent skills |
 | `cursor-backup/claude-skills/` | User Claude skills |
-| `cursor-backup/agents/` | Agents listing / configs |
-| `cursor-backup/plugins/` | Plugin name lists only (no binary caches) |
-| `cursor-backup/mcp.json` | MCP server defs with secrets redacted to `${env:...}` |
-| `cursor-backup/argv.json` | Cursor argv |
-| `cursor-backup/user/settings.json` | User settings |
-| `cursor-backup/user/snippets/` | Snippets |
+| `cursor-backup/plugins/` | Plugin name lists only |
+| `cursor-backup/mcp.json` | MCP defs sanitized |
+| `cursor-backup/user/` | settings / keybindings / snippets |
 | `cursor-backup/extensions.txt` | Extension IDs |
 
 ## Explicitly omitted
@@ -25,9 +26,10 @@
 - Plaintext API keys / tokens / Bearer values
 - `%APPDATA%\Cursor\User\History`
 - `workspaceStorage`, caches, heapsnapshots
-- Plugin binary caches under `.cursor/plugins/cache` (only name list kept)
+- Plugin binary caches
 - Cloud auth cookies / OAuth token stores
+- `~/.cursor/hooks/state`
 
 ## Security note
 
-If any source config had a hardcoded secret (e.g. Stitch), the backup uses `${env:STITCH_API_KEY}` instead. Move secrets to environment variables and rotate any key that was previously stored in plaintext.
+Secrets stay as `${env:...}` or `***REDACTED***`. Repo remains private.

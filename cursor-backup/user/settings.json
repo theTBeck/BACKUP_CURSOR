@@ -42,10 +42,48 @@
             "query": "is:open mentions:@me sort:updated-desc"
         }
     ],
-    "documentViewer.enableMd": false,
-    "documentViewer.enableCsv": false,
-    "documentViewer.enableExcel": false,
-    "documentViewer.enableWord": false,
-    "documentViewer.enablePdf": false,
-    "cursor.composer.queueMessageDefaultBehavior": "steer"
+    "documentViewer.enableMd": true,
+    "documentViewer.enableCsv": true,
+    "documentViewer.enableExcel": true,
+    "documentViewer.enableWord": true,
+    "documentViewer.enablePdf": true,
+    "markdown.preview.doubleClickToSwitchToEditor": true,
+    "workbench.editorAssociations": {
+        "*.md": "syncfusion-rich-text-editor",
+        "*.csv": "syncfusion-csv-viewer",
+        "*.tsv": "syncfusion-csv-viewer",
+        "*.xlsx": "syncfusion-excel-viewer",
+        "*.xls": "syncfusion-excel-viewer",
+        "*.xltx": "syncfusion-excel-viewer",
+        "*.xlt": "syncfusion-excel-viewer",
+        "*.docx": "syncfusion-word-viewer",
+        "*.doc": "syncfusion-word-viewer",
+        "*.dot": "syncfusion-word-viewer",
+        "*.dotx": "syncfusion-word-viewer",
+        "*.rtf": "syncfusion-word-viewer",
+        "*.pdf": "syncfusion-pdf-viewer",
+        "*.markdown": "syncfusion-rich-text-editor"
+    },
+    "cursor.composer.queueMessageDefaultBehavior": "steer",
+    "mcp": {
+        "servers": {
+            "gmail": {
+                "url": "https://gmailmcp.googleapis.com/mcp/v1"
+            },
+            "google-calendar": {
+                "url": "https://calendarmcp.googleapis.com/mcp/v1"
+            },
+            "stitch": {
+                "command": "C:\\Users\\USER\\AppData\\Roaming\\npm\\pnpm.cmd",
+                "args": [
+                    "dlx",
+                    "stitch-mcp-stdio"
+                ],
+                "env": {
+                    "STITCH_API_KEY": "${env:STITCH_API_KEY}"
+                }
+            }
+        }
+    },
+    "markdown.preview.breaks": true
 }

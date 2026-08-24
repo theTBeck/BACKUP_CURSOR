@@ -4,6 +4,27 @@
     "sessionStart": [
       {
         "command": "node ./hooks/prompt-skills-autorun.js"
+      },
+      {
+        "command": "node ./hooks/repos-cursor-guard.js"
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "node ./hooks/repos-cursor-guard.js",
+        "matcher": "Write|Shell|Delete|StrReplace",
+        "failClosed": false
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "command": "node ./hooks/agent-executes-capture.js"
+      }
+    ],
+    "stop": [
+      {
+        "command": "node ./hooks/agent-executes-guard-stop.js",
+        "loop_limit": 2
       }
     ]
   }

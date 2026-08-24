@@ -1,0 +1,22 @@
+---
+description: Todo arquivo e pasta novos devem ser criados em C:\inteligencia-artificial
+alwaysApply: true
+---
+
+# Raiz obrigatória de arquivos
+
+- **Raiz única:** `C:\inteligencia-artificial`
+- Todo arquivo, pasta, relatório, canvas, script ou artefato **novo** deve ser criado **dentro** dessa raiz (subpastas permitidas).
+- **TheMasterBECK:** repos/projetos dele sob `C:\inteligencia-artificial\<projeto>\`.
+- **Agent-Cursor / infra:** **OBRIGATÓRIO** sob `C:\inteligencia-artificial\repos-cursor\` (`.cursor`, `.vscode`, `bin`, ops).
+- **Ops sistema Cursor:** `alwaysApply` + autorun — ver `cursor-ops-repos-cursor.mdc` + hook `repos-cursor-guard`.
+- **Proibido** gravar em: Desktop, Downloads, Temp do Cursor (`AppData\Local\Temp`), `~/.cursor/projects/...` (exceto espelho **depois** de salvar na raiz/`repos-cursor`).
+- Antes de criar algo: garantir destino em `repos-cursor` (Agent) ou raiz projeto (TheMasterBECK).
+
+```text
+✅ C:\inteligencia-artificial\AMPA-LIVRO\relatorio.md
+✅ C:\inteligencia-artificial\repos-cursor\meu-agente\relatorio.md
+✅ C:\inteligencia-artificial\repos-cursor\.cursor\rules\
+❌ C:\Users\USER\Desktop\relatorio.md
+❌ AppData\Local\Temp\...\relatorio.md
+```

@@ -1,45 +1,55 @@
 ---
-description: Autorun obrigatorio — sempre acionar prompt-engineering + enhance-prompt
+description: Autorun obrigatorio — prompt-engineering + context-engineering (B) + /prompt-skills-autorun; enhance-prompt exclusivo Stitch
 alwaysApply: true
 ---
 
-# Autorun: prompt-engineering + enhance-prompt
+# Autorun: prompt-engineering + context-engineering (B) + prompt-skills-autorun
 
 ## Lei (todos os chats)
 
 **SEMPRE**, no inicio de cada tarefa (antes de implementar ou responder o entregavel):
 
-1. Acionar mentalmente / carregar os skills:
-   - `~/.claude/skills/prompt-engineering/SKILL.md`
-   - `~/.claude/skills/stitch/enhance-prompt/SKILL.md`
-2. Aplicar os dois no raciocinio e na saida.
-3. Informar brevemente que o autorun de prompt skills esta ativo (1 linha).
+1. Carregar / aplicar `~/.claude/skills/prompt-engineering/SKILL.md`
+2. Seguir o command `/prompt-skills-autorun`
+3. Context-engineering modo **B** (hook `sessionStart` + rule `context-engineering-autorun.mdc`)
+4. Informar em 1 linha: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun`
 
-Nao esperar o usuario digitar `/prompt-engineering` ou `/enhance-prompt`.
+Nao esperar o usuario digitar `/prompt-engineering` nem `/prompt-skills-autorun`.
 
-## O que aplicar
+Controle: subagente `patroa` cobra conformidade. Todo subagente herda esta lei no proprio `.md`.
+
+## O que aplicar (autorun)
 
 ### prompt-engineering (sempre)
 - Estrutura: Role/Context + Task + Constraints + Output Format
 - Clareza de tarefa, constraints, formato de saida
 - Evitar vagueza, conflito e prompts longos sem prioridade
 
-### enhance-prompt (sempre; intensificar em UI/Stitch)
-- Plataforma, tipo de pagina, estrutura numerada, vibe, cores com roles
-- Keywords de UI concretos (nav, CTA, hero, form…)
-- Se existir `DESIGN.md`, incorporar DESIGN SYSTEM (REQUIRED)
-- Edits: uma mudanca por vez
+### context-engineering modo B
+- Nucleo sintetizado: `context-fundamentals`, `context-optimization`, `filesystem-context`
+- Router 17 on-demand: `C:\inteligencia-artificial\.cursor\skills\<nome>\SKILL.md`
+- Nao carregar as 17 skills no boot
 
-## Autorun operacional
+## FORA do autorun
+
+### enhance-prompt — SOMENTE Stitch
+- **NAO** entra no autorun global
+- Usar **apenas** em pipelines Stitch (`/stitch-diario`, UI/landing gerada via Stitch)
+- Skill: `~/.claude/skills/stitch/enhance-prompt/SKILL.md`
+
+## Operacional
 
 - Command: `/prompt-skills-autorun`
 - Rule: este arquivo (`alwaysApply: true`)
-- Em pipelines Stitch: combinar com `/stitch-diario`
+- Hook: `sessionStart` → `hooks/prompt-skills-autorun.js`
+- Controlador: `~/.cursor/agents/patroa.md`
 
 ## Anti-padroes
 
 ```
-❌ Responder sem estruturar o pedido
+❌ Responder sem estruturar o pedido (prompt-engineering)
 ❌ Pedir ao usuario para “usar o skill X”
-❌ Ignorar enhance-prompt em pedidos de UI/landing/dashboard
+❌ Colocar enhance-prompt no autorun de chats nao-Stitch
+❌ Status sem context-engineering (B, economia tokens)
+❌ Pedir TheMasterBECK para rodar comando / Settings / passo mecanico (ver agent-executes-all.mdc)
 ```

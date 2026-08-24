@@ -1,0 +1,58 @@
+---
+description: Autorun global modo B — context-engineering (economia tokens) + router 17 skills
+alwaysApply: true
+---
+
+# Context Engineering Autorun (modo B)
+
+## Lei (todos os chats — espelho do hook global)
+
+1. **Status (1 linha):** `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun + repos-cursor`
+2. **Hook:** `~/.cursor/hooks/prompt-skills-autorun.js` + `~/.cursor/hooks/repos-cursor-guard.js`
+3. **Skills root:** `C:\inteligencia-artificial\.cursor\skills\` (junction → `repos-cursor\.cursor\skills`)
+4. **Sync:** `C:\inteligencia-artificial\bin\sync-context-engineering-skills.cmd`
+5. **Ops Cursor:** sempre `C:\inteligencia-artificial\repos-cursor\` (`cursor-ops-repos-cursor.mdc`)
+
+## Modo B — nucleo + router + on-demand
+
+### Nucleo (sintese sempre ativa — SKILL.md completo so sob demanda)
+
+| Skill | Comportamento autorun |
+|---|---|
+| `context-fundamentals` | Contexto = orcamento de atencao; qualidade > quantidade |
+| `context-optimization` | Respostas concisas, masking, compaction >70%, prefix estavel |
+| `filesystem-context` | Offload grande para arquivo em `C:\inteligencia-artificial\<projeto>\` |
+
+### Router (17 skills — ler `SKILL.md` completo quando gatilho bater)
+
+Paths: `C:\inteligencia-artificial\.cursor\skills\<nome>\SKILL.md`
+
+- `context-degradation` — lost-in-middle, poisoning, degradacao
+- `context-compression` — reduzir trajectory sob pressao
+- `latent-briefing` — KV cache entre orchestrator/workers
+- `multi-agent-patterns` — coordenacao, handoffs, paralelo
+- `long-horizon-prompting` — agente autonomo longo
+- `memory-systems` — memoria cross-session
+- `tool-design` — contratos e descricoes de tools
+- `hosted-agents` — sandboxes remotos
+- `evaluation` — checks e rubricas
+- `advanced-evaluation` — LLM-as-judge
+- `harness-engineering` — loops autonomos
+- `self-improvement-loops` — RSI, meta-harness
+- `project-development` — task-model fit, pipelines
+- `bdi-mental-states` — beliefs/desires/intentions
+
+## Proibido no autorun
+
+- Carregar corpo completo das 17 skills em todo chat
+- `enhance-prompt` (somente Stitch)
+
+## Exemplos
+
+```
+✅ Chat curto codigo: sintese nucleo + prompt-engineering
+✅ Sessao longa: ler context-degradation + context-compression on-demand
+✅ Output grande: salvar arquivo + referencia (filesystem-context)
+❌ Ler 17 SKILL.md inteiros no boot
+❌ enhance-prompt em chat de ops
+```

@@ -5,6 +5,7 @@ alwaysApply: true
 
 # User Rules (restored)
 
+- **LEI (SEMPRE+OBRIGATORIO):** agente executa TUDO — NUNCA pedir TheMasterBECK para acoes mecanicas (terminal, Settings, cliques, OAuth manual). Ver `agent-executes-all.mdc`. Informar o que esta em curso; encerrar com o que ja foi feito.
 - Sempre responder em portugues.
 - Sempre usar pnpm, nunca npm.
 - Utilizar sempre Google Chrome como browser principal.
@@ -13,5 +14,4 @@ alwaysApply: true
 - Nao criar commits nem PRs a menos que o usuario peca explicitamente; seguir os protocolos de git/PR das user rules quando pedido.
 - Em design frontend, seguir as regras anti-layout-generico (brand first, sem cards no hero, tipografia expressiva, etc.) quando aplicavel.
 - Comunicacao: direta, concisa; bold apenas no essencial.
-- **Agente executa tudo** — nunca pedir TheMasterBECK para acoes manuais; ver `agent-executes-all.mdc`. Sempre informar quais acoes estao em curso.
-- **Autorun obrigatorio:** prompt-engineering + enhance-prompt em todo chat (`prompt-skills-autorun.mdc` + hook sessionStart).
+- **Autorun obrigatorio:** prompt-engineering + context-engineering (B, economia tokens) + `/prompt-skills-autorun` em todo chat (`prompt-skills-autorun.mdc` + hook sessionStart). Status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun`. Controle: subagente `patroa`. **enhance-prompt** so no Stitch (`/stitch-diario`).

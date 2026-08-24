@@ -1,17 +1,12 @@
 ---
 name: actionize
 version: 1.0.0
+disable-model-invocation: true
 description: |
-  Turn insights, findings, or research into an actionable plan with deadlines
-  and scheduled Telegram reminders. Collaboratively designs the plan with the
-  user via AskUserQuestion, saves it to .plan/ in the project, sets up cron
-  reminders via Telegram bot, and shows overdue/today tasks on session start.
-  Use when asked to "make a plan", "actionize this", "turn this into tasks",
-  "schedule this", "create deadlines", "track this", or "diagnose my planning".
-  Invoke with "diagnose" argument to run planning pattern analysis (Phase 7).
-  Proactively suggest when the user has completed research, brainstorming,
-  or /office-hours and has a list of insights without concrete next steps.
-  Proactively suggest "/actionize diagnose" when a plan has >30% deferred tasks.
+  [ARQUIVADO 2026-08-22 — TheMasterBECK] NÃO usar até diretiva explícita
+  "ativar actionize" / "desarquivar actionize".
+  Original: Turn insights into actionable plans with Telegram reminders.
+  Dependencies (Infranodus MCP, Telegram bot, cron) intentionally NOT installed.
 allowed-tools:
   - Bash
   - Read

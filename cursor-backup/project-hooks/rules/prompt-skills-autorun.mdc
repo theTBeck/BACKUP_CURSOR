@@ -1,0 +1,36 @@
+---
+description: Autorun global — prompt-engineering + context-engineering (B) + /prompt-skills-autorun; enhance-prompt exclusivo Stitch
+alwaysApply: true
+---
+
+# Autorun prompt skills (definitivo)
+
+## Sempre (todos os chats)
+
+1. `/prompt-skills-autorun`
+2. Skill `prompt-engineering` (`~/.claude/skills/prompt-engineering/SKILL.md`)
+3. Context-engineering modo **B** (hook global + rule `context-engineering-autorun.mdc`)
+4. Status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun + repos-cursor`
+5. LEI ops Cursor: `C:\inteligencia-artificial\repos-cursor\` — rules `cursor-ops-repos-cursor.mdc` + hook `repos-cursor-guard` + `repos-cursor-guardian`
+
+## Context-engineering (modo B)
+
+- **Nucleo sintetizado:** `context-fundamentals`, `context-optimization`, `filesystem-context`
+- **Router 17 skills:** paths em `C:\inteligencia-artificial\.cursor\skills\` — corpo completo on-demand
+- **Sync:** `bin\sync-context-engineering-skills.cmd`
+
+## Nunca no autorun
+
+- `/enhance-prompt` e skill `enhance-prompt` — **somente Stitch**
+- Corpo completo das 17 skills em todo chat (contraria economia de tokens)
+- Acionar via `/stitch-diario` ou pedido explícito de UI Stitch
+
+## Exemplos
+
+```
+✅ Chat codigo/ops: prompt-engineering + sintese nucleo context-engineering
+✅ /stitch-diario: prompt-engineering (autorun) + enhance-prompt (pipeline Stitch)
+❌ Autorun global carregando enhance-prompt
+❌ Ler 17 SKILL.md inteiros no boot
+❌ Pedir TheMasterBECK para rodar comando / Settings / passo mecanico (ver agent-executes-all.mdc)
+```
