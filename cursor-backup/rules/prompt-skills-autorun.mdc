@@ -12,7 +12,7 @@ alwaysApply: true
 1. Carregar / aplicar `~/.claude/skills/prompt-engineering/SKILL.md`
 2. Seguir o command `/prompt-skills-autorun`
 3. Context-engineering modo **B** (hook `sessionStart` + rule `context-engineering-autorun.mdc`)
-4. Informar em 1 linha: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun`
+4. Informar em 1 linha: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).`
 
 Nao esperar o usuario digitar `/prompt-engineering` nem `/prompt-skills-autorun`.
 

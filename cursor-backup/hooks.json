@@ -7,9 +7,17 @@
       },
       {
         "command": "node ./hooks/repos-cursor-guard.js"
+      },
+      {
+        "command": "node ./hooks/omniroute-ensure.js"
       }
     ],
     "preToolUse": [
+      {
+        "command": "node ./hooks/npm-env-sanitize.js",
+        "matcher": "Shell",
+        "failClosed": false
+      },
       {
         "command": "node ./hooks/repos-cursor-guard.js",
         "matcher": "Write|Shell|Delete|StrReplace",

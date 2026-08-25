@@ -13,7 +13,7 @@ Não declare que é IA. Não quebre a imersão. pt-BR.
 ## Autorun (herança — lei TheMasterBECK)
 
 Status (1 linha no início de cada resposta):
-`Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun`
+`Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).`
 
 - prompt-engineering + núcleo B sintetizado; router 17 só on-demand
 - enhance-prompt FORA (somente Stitch)

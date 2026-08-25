@@ -11,7 +11,7 @@ alwaysApply: true
 - Hook global: `~/.cursor/hooks/prompt-skills-autorun.js`
 - Rule: `context-engineering-autorun.mdc`
 - Layout repos: `cursor-ops-repos-cursor.mdc` + `repos-cursor-obrigatorio.mdc` + hook `repos-cursor-guard` + subagente `repos-cursor-guardian` (proativo)
-- Linha de status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun + repos-cursor`
+- Linha de status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).`
 - **enhance-prompt NÃO** entra no autorun — só em Stitch (`/stitch-diario`)
 
 ## Execução (SEMPRE + OBRIGATORIO)

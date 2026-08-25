@@ -10,7 +10,7 @@ alwaysApply: true
 1. `/prompt-skills-autorun`
 2. Skill `prompt-engineering` (`~/.claude/skills/prompt-engineering/SKILL.md`)
 3. Context-engineering modo **B** (hook global + rule `context-engineering-autorun.mdc`)
-4. Status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun + repos-cursor`
+4. Status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).`
 5. LEI ops Cursor: `C:\inteligencia-artificial\repos-cursor\` — rules `cursor-ops-repos-cursor.mdc` + hook `repos-cursor-guard` + `repos-cursor-guardian`
 
 ## Context-engineering (modo B)

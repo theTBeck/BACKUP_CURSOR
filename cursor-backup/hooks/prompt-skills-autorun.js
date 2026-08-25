@@ -39,7 +39,7 @@ process.stdin.on("end", () => {
 
   const context = [
     "AUTORUN OBRIGATORIO (TheMasterBECK): prompt-engineering + context-engineering (B, economia tokens) + /prompt-skills-autorun ATIVOS.",
-    "Status (1 linha no inicio de cada resposta): Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun",
+    "Status (1 linha no inicio de cada resposta): Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).",
     "",
     "PROMPT-ENGINEERING:",
     "- Skill: ~/.claude/skills/prompt-engineering/SKILL.md",

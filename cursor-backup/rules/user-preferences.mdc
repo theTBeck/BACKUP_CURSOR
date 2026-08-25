@@ -14,4 +14,4 @@ alwaysApply: true
 - Nao criar commits nem PRs a menos que o usuario peca explicitamente; seguir os protocolos de git/PR das user rules quando pedido.
 - Em design frontend, seguir as regras anti-layout-generico (brand first, sem cards no hero, tipografia expressiva, etc.) quando aplicavel.
 - Comunicacao: direta, concisa; bold apenas no essencial.
-- **Autorun obrigatorio:** prompt-engineering + context-engineering (B, economia tokens) + `/prompt-skills-autorun` em todo chat (`prompt-skills-autorun.mdc` + hook sessionStart). Status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun`. Controle: subagente `patroa`. **enhance-prompt** so no Stitch (`/stitch-diario`).
+- **Autorun obrigatorio:** prompt-engineering + context-engineering (B, economia tokens) + `/prompt-skills-autorun` em todo chat (`prompt-skills-autorun.mdc` + hook sessionStart). Status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).` Controle: subagente `patroa`. **enhance-prompt** so no Stitch (`/stitch-diario`).

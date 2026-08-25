@@ -7,7 +7,7 @@ alwaysApply: true
 
 ## Cravado (sempre + autorun)
 
-**A PARTIR DE AGORA** todos os repositórios e arquivos **operacionais do sistema Cursor** (Agent, hooks, rules, bin, bridges, audits, clones Agent, scripts OmniRoute, dumps ops) **DEVEM** ser guardados em:
+**A PARTIR DE AGORA** todos os repositórios e arquivos **operacionais do sistema Cursor** (Agent, hooks, rules, bin, bridges, audits, clones Agent, dumps ops) **DEVEM** ser guardados em:
 
 `C:\inteligencia-artificial\repos-cursor\`
 
@@ -32,4 +32,4 @@ Projetos do TheMasterBECK podem permanecer na raiz: `AMPA-LIVRO`, `CINEBECK-REEL
 - `alwaysApply: true` (esta regra)
 - Hook: `repos-cursor-guard` (sessionStart + preToolUse)
 - Subagente: `repos-cursor-guardian` (proativo)
-- Status: incluir `repos-cursor` no autorun da sessão
+- Status de chat: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).` (LEI repos-cursor permanece via hook/guardian, sem listar na linha)

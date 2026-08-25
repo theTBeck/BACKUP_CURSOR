@@ -11,7 +11,7 @@ alwaysApply: true
 
 ## Prompt skills (autorun global)
 - **SEMPRE ativos:** prompt-engineering + context-engineering (B, economia tokens) + `/prompt-skills-autorun`
-- Status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens) + prompt-skills-autorun`
+- Status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).`
 - **FORA do autorun:** enhance-prompt (somente Stitch / `/stitch-diario`)
 - Rule: `prompt-skills-autorun.mdc`
 - Command: `/prompt-skills-autorun`

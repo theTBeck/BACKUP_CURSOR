@@ -1,0 +1,31 @@
+---
+description: OmniRoute gateway full-time obrigatorio (porta 20128) — terminal + ensure + guardian; nao mutar modelos nativos Cursor
+alwaysApply: true
+---
+
+# OmniRoute full-time (obrigatorio)
+
+## Lei
+
+O gateway **OmniRoute** em `http://localhost:20128/v1` deve estar **UP full-time**. Sem ele, KILO-CODE e CLIs OpenAI-compatible perdem conexao.
+
+## Autorun / sessao
+
+1. No inicio da sessao ou se gateway/KILO falhar: invocar subagente `omniroute-guardian` e executar `C:\inteligencia-artificial\repos-cursor\ops\omniroute-ensure.cmd`.
+2. Manter **terminal Cursor dedicado** aberto ao lado rodando `C:\inteligencia-artificial\repos-cursor\ops\omniroute-start-terminal.cmd` (foreground ou tail do log se a porta ja estiver ativa).
+3. Evidencia obrigatoria de saude: `C:\inteligencia-artificial\bin\omniroute-health.cmd` (porta LISTENING + `/v1/models`).
+
+## Proibido
+
+- Mutar modelos nativos do Cursor (`state.vscdb`, `openAIBaseUrl` do Cursor Agent, `useOpenAIKey` para OmniRoute) — deferir a `cursor-models-guardian`.
+- Declarar "OmniRoute OK" sem prova de porta/`/v1/models`.
+- Deixar o servidor depender so do chat atual sem Task Scheduler / ensure.
+
+## Clientes
+
+- **Kilo**: `kilo-code.openAiBaseUrl` = `http://localhost:20128/v1`
+- **Cursor Agent**: modelos nativos intactos (Grok/Kimi/Claude/Composer/VLM)
+
+## Status de chat
+
+Quando relevante: uma linha com OmniRoute UP/DOWN + evidencia (ex.: `models=N` ou porta down).

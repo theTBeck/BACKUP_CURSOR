@@ -1,5 +1,4 @@
 {
-    "window.autoDetectColorScheme": false,
     "window.systemColorTheme": "dark",
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "cursor.composer.cmdPFilePicker2": true,
@@ -85,5 +84,21 @@
             }
         }
     },
-    "markdown.preview.breaks": true
+    "markdown.preview.breaks": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "kilo-code.new.agentManagerOpen",
+        "kilo-code.new.agentManager.showTerminal",
+        "kilo-code.new.agentManager.previousTerminal",
+        "kilo-code.new.agentManager.nextTerminal"
+    ],
+    "kilo-code.new.agentWorkStyle": "human-in-the-loop",
+    "kilo-code.new.showTaskTimeline": false,
+    "kilo-code.openAiBaseUrl": "http://localhost:20128/v1",
+    "kilo-code.apiKey": "sk-omniroute-local",
+    "kilo-code.new.attention.enabled": true,
+    "workbench.editor.showTabs": "single",
+    "cursor.composer.codeBlockWordWrap": true,
+    "window.menuBarVisibility": "visible",
+    "window.titleBarStyle": "native",
+    "cursor.composer.shouldChimeAfterChatFinishes": true
 }
