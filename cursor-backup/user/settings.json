@@ -2,7 +2,7 @@
     "window.systemColorTheme": "dark",
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "cursor.composer.cmdPFilePicker2": true,
-    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "Nebula Aura Midnight",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.profiles.windows": {
         "Command Prompt": {
@@ -96,9 +96,14 @@
     "kilo-code.openAiBaseUrl": "http://localhost:20128/v1",
     "kilo-code.apiKey": "sk-omniroute-local",
     "kilo-code.new.attention.enabled": true,
-    "workbench.editor.showTabs": "single",
     "cursor.composer.codeBlockWordWrap": true,
     "window.menuBarVisibility": "visible",
     "window.titleBarStyle": "native",
-    "cursor.composer.shouldChimeAfterChatFinishes": true
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "editor.minimap.enabled": true,
+    "files.autoSave": "afterDelay",
+    "kilo-code.new.fontSize": 14,
+    "kilo-code.new.autoApprove.enabled": true,
+    "kilo-code.new.language": "br",
+    "kilo-code.new.claudeCodeCompat": true
 }

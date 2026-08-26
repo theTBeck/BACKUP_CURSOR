@@ -18,3 +18,9 @@ History/
 workspaceStorage/
 *.heapsnapshot
 cursor-backup/hooks/state/
+
+# Playwright browsers + Python venvs (too large for GitHub >100MB)
+**/ms-playwright/
+**/.venv/
+**/__pycache__/
+*.pyc

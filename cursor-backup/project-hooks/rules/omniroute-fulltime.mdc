@@ -11,15 +11,17 @@ O gateway **OmniRoute** em `http://localhost:20128/v1` deve estar **UP full-time
 
 ## Autorun / sessao
 
-1. No inicio da sessao ou se gateway/KILO falhar: invocar subagente `omniroute-guardian` e executar `C:\inteligencia-artificial\repos-cursor\ops\omniroute-ensure.cmd`.
-2. Manter **terminal Cursor dedicado** aberto ao lado rodando `C:\inteligencia-artificial\repos-cursor\ops\omniroute-start-terminal.cmd` (foreground ou tail do log se a porta ja estiver ativa).
-3. Evidencia obrigatoria de saude: `C:\inteligencia-artificial\bin\omniroute-health.cmd` (porta LISTENING + `/v1/models`).
+1. No inicio da sessao ou se gateway/KILO falhar: invocar subagente `omniroute-guardian` e executar `C:\inteligencia-artificial\repos-cursor\ops\omniroute-ensure.cmd` (hidden via `--hidden` / Task Scheduler wrapper PS).
+2. Evidencia obrigatoria de saude: `C:\inteligencia-artificial\bin\omniroute-health.cmd` (porta LISTENING + `/v1/models`, PowerShell Hidden — zero pop-up).
+3. Logs do gateway: `C:\inteligencia-artificial\repos-cursor\ops\logs\omniroute-server.log` (leitura via Read/tail somente se pedido).
 
 ## Proibido
 
 - Mutar modelos nativos do Cursor (`state.vscdb`, `openAIBaseUrl` do Cursor Agent, `useOpenAIKey` para OmniRoute) — deferir a `cursor-models-guardian`.
 - Declarar "OmniRoute OK" sem prova de porta/`/v1/models`.
 - Deixar o servidor depender so do chat atual sem Task Scheduler / ensure.
+- **Pop-up Windows** (`C:\WINDOWS\system32\cmd.exe` flash): proibido abrir via agente/hook/Task Scheduler — inclui `start cmd.exe /k`, `omniroute-open-dedicated-cmd.cmd` e spawn externo de `omniroute-start-terminal.cmd`.
+- Encaminhar janela CMD para monitor/captura externa — operacao e 100% hidden.
 
 ## Clientes
 
