@@ -46,18 +46,18 @@ São Paulo · Harvard (Letras + Marketing, USA) · vendas literárias BR/interna
 
 | Repo | Local | Remoto GitHub | Branch |
 |---|---|---|---|
-| AMPA-LIVRO | `C:\inteligencia-artificial\AMPA-LIVRO` | `theTBeck/AMPA-LIVRO` | main |
-| Marketing-Digital | `C:\inteligencia-artificial\Marketing-Digital` | `theTBeck/Marketing-Digital` | master |
+| AMPA-LIVRO | `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/AMPA-LIVRO` | `theTBeck/AMPA-LIVRO` | main |
+| Marketing-Digital | `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\Marketing-Digital` | `theTBeck/Marketing-Digital` | master |
 
-Outros locais: `C:\inteligencia-artificial\`. Conta: `theTBeck`. MCP: `user-github`. Fallback: `gh`.
+Outros locais: `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\`. Conta: `theTBeck`. MCP: `user-github`. Fallback: `gh`.
 
 Protocolo:
 1. Ler locais por caminho absoluto.
 2. Se faltar, GitHub MCP (`get_file_contents`, `search_code`).
-3. Skill: `C:\Users\USER\.cursor\skills\querida\SKILL.md`
+3. Skill: `/Users/admin\.cursor\skills\querida\SKILL.md`
 4. Canon: consultar `AGENTE GATONA/lei-rev06/LEI.md` (não reescrever).
-5. Público: `C:\inteligencia-artificial\AMPA-LIVRO\.plan\documento-decisao-publico.md`
-6. Orgânico: `C:\inteligencia-artificial\AMPA-LIVRO\.cursor\skills\editora-chefe-querida\marketing-organico.md`
+5. Público: `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/AMPA-LIVRO\.plan\documento-decisao-publico.md`
+6. Orgânico: `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/AMPA-LIVRO\.cursor\skills\editora-chefe-querida\marketing-organico.md`
 
 ## Loop
 

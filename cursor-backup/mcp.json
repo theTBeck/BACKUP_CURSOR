@@ -24,7 +24,7 @@
       ]
     },
     "stitch": {
-      "command": "C:\\Users\\USER\\AppData\\Roaming\\npm\\pnpm.cmd",
+      "command": "\Users\admin\\AppData\\Roaming\\npm\\pnpm.cmd",
       "args": [
         "dlx",
         "stitch-mcp-stdio"
@@ -66,10 +66,10 @@
     "capcut": {
       "command": "node",
       "args": [
-        "C:\\inteligencia-artificial\\CONNECTIONS\\repos\\CapCut-Draft-MCP\\src\\server.js"
+        "\Users\admin\Documents\INTELIGENCIA-ARTIFICIAL\\CONNECTIONS\\repos\\CapCut-Draft-MCP\\src\\server.js"
       ],
       "env": {
-        "CAPCUT_DRAFTS_DIR": "C:\\Users\\USER\\AppData\\Local\\CapCut\\User Data\\Projects\\com.lveditor.draft",
+        "CAPCUT_DRAFTS_DIR": "\Users\admin\\AppData\\Local\\CapCut\\User Data\\Projects\\com.lveditor.draft",
         "CAPCUT_TEMPLATE_DRAFT": "dop-reel-v5"
       }
     },

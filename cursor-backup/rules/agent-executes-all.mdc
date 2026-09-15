@@ -22,7 +22,7 @@ Pedir, sugerir ou encerrar com TheMasterBECK fazendo:
 
 ## OBRIGATORIO
 
-1. **Executar** com tools (Shell/CMD, edicao de arquivos, MCP, Chrome/Playwright, `cursor` CLI, scripts em `C:\inteligencia-artificial\bin\`).
+1. **Executar** com tools (Shell/CMD, edicao de arquivos, MCP, Chrome/Playwright, `cursor` CLI, scripts em `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\bin\`).
 2. **Informar** em portugues o que esta sendo executado (lista curta), sem pedir permissao para passos mecanicos.
 3. Em falha: diagnosticar causa → corrigir → **rerodar**. Nao transferir o trabalho ao usuario.
 4. So mencionar bloqueio do usuario quando for **incontornavel no sistema** (cartao nativo de aprovacao do Cursor, captcha, 2FA humano). Nesse caso: ja ter iniciado o fluxo e dizer exatamente o que o sistema pediu — sem checklist de “va em Settings…”.
@@ -40,7 +40,7 @@ Pedir, sugerir ou encerrar com TheMasterBECK fazendo:
 ✅ Agente abre Chrome (MCP) + mcp_auth; so para se o cartao/2FA bloquear
 
 ❌ “Crie a pasta / cole este arquivo”
-✅ Agente cria/escreve em C:\inteligencia-artificial\...
+✅ Agente cria/escreve em /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\...
 ```
 
 ## Encerramento de resposta

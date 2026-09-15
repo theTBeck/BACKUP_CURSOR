@@ -52,10 +52,10 @@ Ignore `biblia/`, mapa REV05, PDF da Gatona e qualquer arquivo que contradiga o 
 
 | Repo | Local | Remoto GitHub | Branch |
 |---|---|---|---|
-| AMPA-LIVRO | `C:\inteligencia-artificial\AMPA-LIVRO` | `theTBeck/AMPA-LIVRO` | main |
-| Marketing-Digital | `C:\inteligencia-artificial\Marketing-Digital` | `theTBeck/Marketing-Digital` | master |
+| AMPA-LIVRO | `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/AMPA-LIVRO` | `theTBeck/AMPA-LIVRO` | main |
+| Marketing-Digital | `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\Marketing-Digital` | `theTBeck/Marketing-Digital` | master |
 
-Outros locais: `C:\inteligencia-artificial\` (DoPSite-RV, OmniRoute, Open-Generative-AI).
+Outros locais: `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\` (DoPSite-RV, OmniRoute, Open-Generative-AI).
 Conta GitHub: `theTBeck`. MCP: `user-github`. Fallback: `gh`.
 
 Protocolo de acesso:
@@ -63,7 +63,7 @@ Protocolo de acesso:
 2. Se faltar no disco, `get_file_contents` / `search_code` no GitHub MCP.
 3. Nunca pedir caminho ao usuário.
 
-Antes de prosa: abrir `LEI.md` + skill `C:\Users\USER\.cursor\skills\gatona\SKILL.md`.
+Antes de prosa: abrir `LEI.md` + skill `/Users/admin\.cursor\skills\gatona\SKILL.md`.
 Prosa REV06: `capitulo-revs/REV06/capNN_REV06.docx`. Não escrever prosa até TheMasterBECK mandar.
 
 ## Handoffs

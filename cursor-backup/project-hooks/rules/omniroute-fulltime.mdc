@@ -11,9 +11,9 @@ O gateway **OmniRoute** em `http://localhost:20128/v1` deve estar **UP full-time
 
 ## Autorun / sessao
 
-1. No inicio da sessao ou se gateway/KILO falhar: invocar subagente `omniroute-guardian` e executar `C:\inteligencia-artificial\repos-cursor\ops\omniroute-ensure.cmd` (hidden via `--hidden` / Task Scheduler wrapper PS).
-2. Evidencia obrigatoria de saude: `C:\inteligencia-artificial\bin\omniroute-health.cmd` (porta LISTENING + `/v1/models`, PowerShell Hidden — zero pop-up).
-3. Logs do gateway: `C:\inteligencia-artificial\repos-cursor\ops\logs\omniroute-server.log` (leitura via Read/tail somente se pedido).
+1. No inicio da sessao ou se gateway/KILO falhar: invocar subagente `omniroute-guardian` e executar `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor\ops\omniroute-ensure.cmd` (hidden via `--hidden` / Task Scheduler wrapper PS).
+2. Evidencia obrigatoria de saude: `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\bin\omniroute-health.cmd` (porta LISTENING + `/v1/models`, PowerShell Hidden — zero pop-up).
+3. Logs do gateway: `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor\ops\logs\omniroute-server.log` (leitura via Read/tail somente se pedido).
 
 ## Proibido
 

@@ -9,17 +9,17 @@ alwaysApply: true
 
 **A PARTIR DE AGORA** todos os repositórios e arquivos **operacionais do sistema Cursor** (Agent, hooks, rules, bin, bridges, audits, clones Agent, dumps ops) **DEVEM** ser guardados em:
 
-`C:\inteligencia-artificial\repos-cursor\`
+`/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor\`
 
 ## Obrigatório
 
 ```text
-✅ C:\inteligencia-artificial\repos-cursor\<qualquer-ops-cursor>\
+✅ /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor\<qualquer-ops-cursor>\
 ✅ Junções raiz .cursor / .vscode / bin → repos-cursor\...
 ```
 
 ```text
-❌ Novo ops Cursor solto na raiz C:\inteligencia-artificial\
+❌ Novo ops Cursor solto na raiz /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\
 ❌ Desktop / Downloads / Temp / Documents\GitHub / AppData\Local\Temp
 ```
 

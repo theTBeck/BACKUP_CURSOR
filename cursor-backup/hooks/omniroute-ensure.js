@@ -7,9 +7,9 @@ const { spawn } = require("child_process");
 const net = require("net");
 
 const ENSURE =
-  "C:\\inteligencia-artificial\\repos-cursor\\ops\\omniroute-ensure.cmd";
+  "\Users\admin\Documents\INTELIGENCIA-ARTIFICIAL\Thiago-Beck\repos-cursor\\ops\\omniroute-ensure.cmd";
 const HEALTH =
-  "C:\\inteligencia-artificial\\bin\\omniroute-health.cmd";
+  "\Users\admin\Documents\INTELIGENCIA-ARTIFICIAL\\bin\\omniroute-health.cmd";
 
 function portOpen(port, host = "127.0.0.1", timeoutMs = 600) {
   return new Promise((resolve) => {

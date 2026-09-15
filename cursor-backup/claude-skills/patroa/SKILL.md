@@ -8,7 +8,7 @@ description: >
 
 # PATROA — controle (skill)
 
-Identidade e mandato: `C:\Users\USER\.cursor\agents\patroa.md`
+Identidade e mandato: `/Users/admin\.cursor\agents\patroa.md`
 
 ## Autorun (lei — todos os chats e subagentes)
 
@@ -16,11 +16,11 @@ Status obrigatorio (1 linha no inicio):
 
 `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).`
 
-- prompt-engineering: `C:\Users\USER\.claude\skills\prompt-engineering\SKILL.md`
+- prompt-engineering: `/Users/admin\.claude\skills\prompt-engineering\SKILL.md`
 - Nucleo B (sintese, nao SKILL.md completo no boot): context-fundamentals, context-optimization, filesystem-context
-- Router 17 on-demand: `C:\inteligencia-artificial\.cursor\skills\<nome>\SKILL.md`
+- Router 17 on-demand: `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\.cursor\skills\<nome>\SKILL.md`
 - enhance-prompt FORA — somente Stitch (`/stitch-diario`)
-- Hook: `C:\Users\USER\.cursor\hooks.json` → `sessionStart` → `hooks/prompt-skills-autorun.js`
+- Hook: `/Users/admin\.cursor\hooks.json` → `sessionStart` → `hooks/prompt-skills-autorun.js`
 
 ## O que a PATROA cobra
 

@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * Autorun + enforcement: ops Cursor → C:\inteligencia-artificial\repos-cursor
+ * Autorun + enforcement: ops Cursor → /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor
  * sessionStart → additional_context | preToolUse Write/Shell → allow/deny
  */
 const path = require("path");
 
-const ROOT = "C:\\inteligencia-artificial";
+const ROOT = "\Users\admin\Documents\INTELIGENCIA-ARTIFICIAL";
 const REPOS = path.join(ROOT, "repos-cursor");
 const ALLOW_ROOT = new Set([
   "AMPA-LIVRO",
@@ -22,14 +22,14 @@ const ALLOW_ROOT = new Set([
 ]);
 
 const FORBIDDEN_PREFIXES = [
-  "C:\\Users\\USER\\Desktop",
-  "C:\\Users\\USER\\Downloads",
-  "C:\\Users\\USER\\Documents\\GitHub",
-  "C:\\Users\\USER\\AppData\\Local\\Temp",
+  "\Users\admin\\Desktop",
+  "\Users\admin\\Downloads",
+  "\Users\admin\\Documents\\GitHub",
+  "\Users\admin\\AppData\\Local\\Temp",
 ];
 
 const LAW_CONTEXT = [
-  "LEI CRAVADA (autorun+alwaysApply): ops/sistema Cursor → C:\\inteligencia-artificial\\repos-cursor\\",
+  "LEI CRAVADA (autorun+alwaysApply): ops/sistema Cursor → \Users\admin\Documents\INTELIGENCIA-ARTIFICIAL\Thiago-Beck\repos-cursor\\",
   "Subagente: repos-cursor-guardian (proativo).",
   "Proibido: Desktop/Downloads/Temp/Documents\\GitHub e ops Agent soltos na raiz.",
   "Exceção TheMasterBECK na raiz: AMPA-LIVRO, CINEBECK-REEL, DoPSite-RV(+_legacy), Marketing-Digital, PROD-VIDIGA, BACKUP_CURSOR.",
@@ -80,7 +80,7 @@ function extractPaths(payload, tool) {
       const cmd = ti.command;
       if (/mkdir|git\s+clone|move\s+|robocopy|New-Item/i.test(cmd)) {
         const re =
-          /C:\\inteligencia-artificial\\[^\s"']+|C:\\Users\\USER\\(?:Desktop|Downloads|Documents\\GitHub|AppData\\Local\\Temp)\\[^\s"']+/gi;
+          /\Users\admin\Documents\INTELIGENCIA-ARTIFICIAL\\[^\s"']+|\Users\admin\\(?:Desktop|Downloads|Documents\\GitHub|AppData\\Local\\Temp)\\[^\s"']+/gi;
         let m;
         while ((m = re.exec(cmd))) paths.push(m[0]);
       }
@@ -103,7 +103,7 @@ function deny(msg) {
   return {
     permission: "deny",
     user_message: msg,
-    agent_message: msg + " Use C:\\inteligencia-artificial\\repos-cursor\\",
+    agent_message: msg + " Use \Users\admin\Documents\INTELIGENCIA-ARTIFICIAL\Thiago-Beck\repos-cursor\\",
   };
 }
 

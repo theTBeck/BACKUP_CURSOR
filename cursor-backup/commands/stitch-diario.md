@@ -27,7 +27,6 @@ Execute o pipeline Stitch completo para o projeto atual. Fluxo diário obrigató
 - Não instalar npm; usar pnpm.
 - Se Stitch MCP falhar: agente tenta `cursor --add-mcp`, launcher e teste API; reporta causa; nao fingir sucesso; nao pedir Restart manual.
 - Kairogen permanece DESLIGADO até nova ordem.
-- Actionize permanece ARQUIVADO até diretiva explícita de TheMasterBECK.
 
 ## Saída esperada
 Resumo curto do que gerou (arquivos/páginas), próximo passo do pipeline, e bloqueios se houver.

@@ -4,7 +4,7 @@
 - **Date (UTC):** 2026-08-26T17:51:41Z
 - **Owner:** TheMasterBECK / theTBeck
 - **Repo:** https://github.com/theTBeck/BACKUP_CURSOR (private)
-- **Host path:** `C:\inteligencia-artificial\BACKUP_CURSOR`
+- **Host path:** `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\BACKUP_CURSOR`
 
 ## Included
 

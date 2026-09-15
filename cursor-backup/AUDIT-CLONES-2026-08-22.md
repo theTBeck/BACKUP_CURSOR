@@ -1,6 +1,6 @@
 # Auditoria clones locais — 2026-08-22
 
-Raiz: `C:\inteligencia-artificial`
+Raiz: `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL`
 
 | Pasta | Git | Remote | Branch | Sync |
 |-------|-----|--------|--------|------|
@@ -14,7 +14,7 @@ Raiz: `C:\inteligencia-artificial`
 | TESTES-REPO_GITHUB | **não** | — | — | sem `.git` |
 
 ## Outros
-- `C:\Users\USER\dev\editorial-tools` — toolkit editorial (quollwriter, novelWriter, quarto, vivliostyle, kindle-book-agency…). Não é clone GitHub único.
+- `/Users/admin\dev\editorial-tools` — toolkit editorial (quollwriter, novelWriter, quarto, vivliostyle, kindle-book-agency…). Não é clone GitHub único.
 - RTK instalado: `rtk 0.45.0` em `~/.local/bin/rtk.exe`.
 
 ## Ações sugeridas (não auto-executadas)

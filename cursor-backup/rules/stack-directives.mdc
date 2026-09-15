@@ -1,5 +1,5 @@
 ---
-description: Diretivas de stack Cursor — Kairogen off, Stitch diário, Actionize arquivado
+description: Diretivas de stack Cursor — Kairogen off, Stitch diário
 alwaysApply: true
 ---
 
@@ -34,9 +34,6 @@ alwaysApply: true
 ## Catálogo
 - READY: premiere, notebooklm, mercadopago (+ github, higgsfield, chrome, playwright)
 - ERROR → `mcp.error.disabled.json`: bling, photoshop
-
-## Actionize
-- **ARQUIVADO**. Ver `actionize-archived.mdc`.
 
 ## Agents
 - `gatona`, `patroa`, `querida` em `~/.cursor/agents/`
