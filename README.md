@@ -1,8 +1,8 @@
-# BACKUP_CURSOR
+# BACKUP-CURSOR-AI-ASSOCIADOS
 
-Backup **privado e sanitizado** do setup Cursor — TheMasterBECK / IA Associados.
+Repositório de configurações para Cursor IDE — backup **privado e sanitizado** (TheMasterBECK / IA Associados).
 
-**Remoto canônico:** https://github.com/ia-associados/BACKUP-CURSOR-AI-ASSOCIADOS.git
+**Remoto:** https://github.com/ia-associados/BACKUP-CURSOR-AI-ASSOCIADOS
 
 ## Conteudo
 
@@ -23,3 +23,9 @@ API keys e tokens **nao** entram neste repo em texto claro. Restaure secrets via
 ## Atualizacao
 
 A rule `backup-cursor-setup.mdc` instrui o agente a sincronizar este repo quando o setup mudar (somente se houver diff real).
+
+## Restore (macOS)
+
+```bash
+bash /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor/bin/restore-backup-cursor-mac.sh
+```
