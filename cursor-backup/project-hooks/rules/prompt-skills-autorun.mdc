@@ -1,0 +1,28 @@
+---
+description: Autorun — grill-me + prompt-engineering + context-engineering (B) + /prompt-skills-autorun
+alwaysApply: true
+---
+
+# Autorun prompt skills
+
+## Sempre (todos os chats)
+
+1. `/prompt-skills-autorun` (hook `sessionStart` → `prompt-skills-autorun.js`)
+2. Skill **grill-me** (`/grilling` — planos ambíguos ou grandes)
+3. Skill **prompt-engineering** (`~/.claude/skills/prompt-engineering/SKILL.md`)
+4. Context-engineering modo **B** (rule `context-engineering-autorun.mdc` + hook)
+5. Status: `Autorun ativo: grill-me + prompt-engineering + context-engineering (B, economia tokens).`
+
+## Fora do autorun
+
+- **using-superpowers** — não entra no autorun (invocar manualmente se necessário)
+- **enhance-prompt** — somente Stitch (`/stitch-diario`)
+
+## Exemplos
+
+```
+✅ Ops/código: grill-me + prompt-engineering + núcleo B
+✅ /stitch-diario: autorun + enhance-prompt no pipeline Stitch
+❌ using-superpowers no boot de todo chat
+❌ Pedir passos mecânicos ao TheMasterBECK (agent-executes-all.mdc)
+```

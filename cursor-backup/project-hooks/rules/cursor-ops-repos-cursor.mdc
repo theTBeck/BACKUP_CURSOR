@@ -9,27 +9,27 @@ alwaysApply: true
 
 **A PARTIR DE AGORA** todos os repositórios e arquivos **operacionais do sistema Cursor** (Agent, hooks, rules, bin, bridges, audits, clones Agent, dumps ops) **DEVEM** ser guardados em:
 
-`/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor\`
+`/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor/`
 
 ## Obrigatório
 
 ```text
-✅ /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor\<qualquer-ops-cursor>\
+✅ /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor/<qualquer-ops-cursor>/
 ✅ Junções raiz .cursor / .vscode / bin → repos-cursor\...
 ```
 
 ```text
-❌ Novo ops Cursor solto na raiz /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\
-❌ Desktop / Downloads / Temp / Documents\GitHub / AppData\Local\Temp
+❌ Novo ops Cursor solto na raiz /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/
+❌ Desktop / Downloads / Temp / Documents/GitHub / AppData/Local/Temp
 ```
 
 ## Exceção (TheMasterBECK — projetos dele)
 
-Projetos do TheMasterBECK podem permanecer na raiz: `AMPA-LIVRO`, `CINEBECK-REEL`, `DoPSite-RV`, `DoPSite-RV_legacy`, `Marketing-Digital`, `PROD-VIDIGA`, `BACKUP_CURSOR`.
+Projetos do TheMasterBECK podem permanecer na raiz: `CINEBECK-REEL`, `DoPSite-RV`, `DoPSite-RV_legacy`, `Marketing-Digital`, `PROD-VIDIGA`, `BACKUP_CURSOR`. **AMPA-LIVRO:** checkout em `Thiago-Beck/Marketing-Digital/clients/AMPA-LIVRO` (não submodule na raiz).
 
 ## Autorun
 
 - `alwaysApply: true` (esta regra)
 - Hook: `repos-cursor-guard` (sessionStart + preToolUse)
 - Subagente: `repos-cursor-guardian` (proativo)
-- Status de chat: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).` (LEI repos-cursor permanece via hook/guardian, sem listar na linha)
+- Status de chat: `Autorun ativo: grill-me + prompt-engineering + context-engineering (B, economia tokens).` (LEI repos-cursor permanece via hook/guardian, sem listar na linha)

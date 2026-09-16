@@ -1,0 +1,46 @@
+---
+description: LEI CANÔNICA — Google Chrome sempre para browser/auth/internet; Safari se Chrome bloquear
+alwaysApply: true
+---
+
+# LEI: Browser — Chrome primeiro, Safari fallback
+
+## Cravado (sempre + autorun)
+
+Sempre que a tarefa exigir **browser**, **autenticação web**, **OAuth**, **login**, **URL**, **HTML**, **preview web** ou **qualquer acesso à internet via navegador**, o agente **DEVE abrir e executar Google Chrome** — nunca pedir ao TheMasterBECK que abra manualmente.
+
+## Ordem obrigatória
+
+### 1. Google Chrome (sempre primeiro)
+
+1. **Abrir Chrome** (macOS): `open -a "Google Chrome" "<url>"` quando precisar do app nativo.
+2. **MCP Chrome** (ordem de preferência):
+   - `user-chrome-devtools` — DevTools, auditoria, interação nativa Chrome
+   - `user-playwright` — automação web em Chrome
+   - `cursor-ide-browser` — automação em aba do Cursor (Chromium)
+3. **Executar** navegação, login, auth e interações até concluir ou bloqueio real.
+
+### 2. Safari (fallback fixo)
+
+Se Chrome **não permitir acesso**, **bloquear**, **falhar**, **recusar comando** ou **não abrir**:
+
+1. **Abrir Safari** (macOS): `open -a Safari "<url>"`
+2. **MCP Safari**: namespace `user-safari` (`safari_navigate`, `safari_click`, `safari_fill`, etc.)
+3. **Continuar** a mesma tarefa no Safari — não parar nem transferir ao usuário.
+
+## Proibido
+
+- Usar Safari, Firefox ou outro browser **antes** de tentar Chrome.
+- Dizer “não consigo abrir browser” sem ter tentado Chrome **e** Safari.
+- Pedir ao TheMasterBECK que abra browser, faça login ou copie URL manualmente (salvo bloqueio nativo incontornável: 2FA / captcha / aprovação Cursor).
+
+## Sinais de fallback para Safari
+
+- Chrome MCP retorna erro, timeout ou `isError`
+- `open -a "Google Chrome"` falha ou página não carrega
+- Bloqueio de extensão, perfil, política ou permissão exclusiva do Chrome
+- Auth funciona no Safari mas não no Chrome (após retry razoável no Chrome)
+
+## Encerramento
+
+Informar qual browser foi usado (Chrome ou Safari fallback) + URL/resultado. Nunca checklist manual para TheMasterBECK.

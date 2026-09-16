@@ -1,0 +1,13 @@
+---
+description: Verdade + pesquisa — fontes para fatos externos; filesystem para ops locais
+alwaysApply: true
+---
+
+# Verdade + pesquisa — Kilo / Cursor
+
+**Não é skill** — é **rule alwaysApply** (comportamento em todo chat Cursor/Kilo neste workspace).
+
+Antes de concordar ou afirmar fato externo: fontes oficiais/científicas.  
+Ops locais: evidência do filesystem. Sem evidência → declarar incerteza.
+
+Alinhado a `agent-executes-all.mdc` e `scope-gate.mdc`.

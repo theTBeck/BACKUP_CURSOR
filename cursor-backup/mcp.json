@@ -13,24 +13,52 @@
       "command": "pnpm",
       "args": [
         "dlx",
-        "chrome-devtools-mcp@latest"
+        "chrome-devtools-mcp@latest",
+        "--channel",
+        "stable",
+        "--workspace",
+        "/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL"
       ]
     },
     "playwright": {
       "command": "pnpm",
       "args": [
         "dlx",
-        "@playwright/mcp@latest"
+        "@playwright/mcp@latest",
+        "--browser",
+        "chrome"
+      ],
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "/Users/admin/Library/Caches/ms-playwright"
+      }
+    },
+    "playwright-webkit": {
+      "command": "pnpm",
+      "args": [
+        "dlx",
+        "@playwright/mcp@latest",
+        "--browser",
+        "webkit"
+      ],
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "/Users/admin/Library/Caches/ms-playwright"
+      }
+    },
+    "safari": {
+      "command": "pnpm",
+      "args": [
+        "dlx",
+        "safari-mcp@latest"
       ]
     },
     "stitch": {
-      "command": "\Users\admin\\AppData\\Roaming\\npm\\pnpm.cmd",
+      "command": "pnpm",
       "args": [
         "dlx",
         "stitch-mcp-stdio"
       ],
       "env": {
-        "STITCH_***REDACTED***
+        "STITCH_API_KEY": "${env:STITCH_API_KEY}"
       }
     },
     "higgsfield": {
@@ -62,16 +90,6 @@
         "dlx",
         "@theyahia/mercadopago-mcp"
       ]
-    },
-    "capcut": {
-      "command": "node",
-      "args": [
-        "\Users\admin\Documents\INTELIGENCIA-ARTIFICIAL\\CONNECTIONS\\repos\\CapCut-Draft-MCP\\src\\server.js"
-      ],
-      "env": {
-        "CAPCUT_DRAFTS_DIR": "\Users\admin\\AppData\\Local\\CapCut\\User Data\\Projects\\com.lveditor.draft",
-        "CAPCUT_TEMPLATE_DRAFT": "dop-reel-v5"
-      }
     },
     "capcut-api": {
       "url": "http://localhost:9001/mcp"

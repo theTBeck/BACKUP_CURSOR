@@ -1,6 +1,8 @@
 # BACKUP_CURSOR
 
-Backup **privado e sanitizado** do setup Cursor do usuario TheMasterBECK.
+Backup **privado e sanitizado** do setup Cursor — TheMasterBECK / IA Associados.
+
+**Remoto canônico:** https://github.com/ia-associados/BACKUP-CURSOR-AI-ASSOCIADOS.git
 
 ## Conteudo
 

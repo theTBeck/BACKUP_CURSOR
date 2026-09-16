@@ -3,7 +3,13 @@
   "hooks": {
     "sessionStart": [
       {
+        "command": "node .cursor/hooks/prompt-skills-autorun.js"
+      },
+      {
         "command": "node .cursor/hooks/repos-cursor-guard.js"
+      },
+      {
+        "command": "node .cursor/hooks/cursor-kilo-sync.js"
       }
     ],
     "preToolUse": [
@@ -11,6 +17,22 @@
         "command": "node .cursor/hooks/repos-cursor-guard.js",
         "matcher": "Write|Shell|Delete|StrReplace",
         "failClosed": false
+      }
+    ],
+    "postToolUse": [
+      {
+        "matcher": "Read|Grep|Glob|Search|Shell",
+        "command": "node .cursor/hooks/graft-hooks.cjs cursor-post-tool"
+      }
+    ],
+    "afterMCPExecution": [
+      {
+        "command": "node .cursor/hooks/graft-hooks.cjs cursor-mcp"
+      }
+    ],
+    "sessionEnd": [
+      {
+        "command": "node .cursor/hooks/graft-hooks.cjs cursor-session-end"
       }
     ]
   }

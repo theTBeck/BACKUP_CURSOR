@@ -7,11 +7,11 @@ alwaysApply: true
 
 ## Autorun (sempre)
 
-- Ativo: `prompt-engineering` + context-engineering **(B, economia tokens)** + `/prompt-skills-autorun`
-- Hook global: `~/.cursor/hooks/prompt-skills-autorun.js`
-- Rule: `context-engineering-autorun.mdc`
+- Ativo: `grill-me` + `prompt-engineering` + context-engineering **(B, economia tokens)** + `/prompt-skills-autorun`
+- Hook global: `~/.cursor/hooks/prompt-skills-autorun.js` (canônico: `repos-cursor/ops/hooks/` — sync: `repos-cursor/ops/sync-cursor-hooks.cmd`)
+- Rules alwaysApply: `prompt-skills-autorun.mdc` + `context-engineering-autorun.mdc` + `browser-chrome-safari-canonico.mdc` + esta rule
 - Layout repos: `cursor-ops-repos-cursor.mdc` + `repos-cursor-obrigatorio.mdc` + hook `repos-cursor-guard` + subagente `repos-cursor-guardian` (proativo)
-- Linha de status: `Autorun ativo: prompt-engineering + context-engineering (B, economia tokens).`
+- Linha de status: `Autorun ativo: grill-me + prompt-engineering + context-engineering (B, economia tokens).`
 - **enhance-prompt NÃO** entra no autorun — só em Stitch (`/stitch-diario`)
 
 ## Execução (SEMPRE + OBRIGATORIO)
@@ -19,6 +19,6 @@ alwaysApply: true
 Espelho da lei global/workspace `agent-executes-all.mdc`:
 
 - **PROIBIDO** pedir passos manuais / comandos / cliques ao TheMasterBECK.
-- **OBRIGATORIO** o agente executar (Shell, arquivos, MCP, Chrome, bin\*.cmd).
+- **OBRIGATORIO** o agente executar (Shell, arquivos, MCP, Chrome → Safari fallback, bin\*.cmd).
 - Executar até operacional (exit 0 / testes OK) ou falha com causa + retry automatico.
 - Encerrar com o que **ja foi feito** — nunca com “faca X”.

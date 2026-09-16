@@ -1,0 +1,9 @@
+---
+description: Higgsfield — CLAUDE.full.md só on-demand
+globs: .claude/skills/higgsfield/**,**/higgsfield/**
+alwaysApply: false
+---
+
+# Higgsfield (on-demand)
+
+Carregar `.claude/skills/higgsfield/SKILL.md` e, se necessário, `CLAUDE.full.md` — **não** no autorun.

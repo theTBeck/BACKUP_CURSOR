@@ -1,0 +1,28 @@
+---
+description: Freio de escopo — só executar o pedido explícito desta mensagem (anti side-quest)
+alwaysApply: true
+---
+
+# Scope Gate (TheMasterBECK)
+
+## Obrigatório
+
+1. **Escopo = última mensagem do TheMasterBECK.** Não iniciar pipelines, sync, campanhas, commits ou ops não pedidos.
+2. **Pergunta / auditoria / diagnóstico** → responder e listar achados; **não** executar tarefas operacionais extras.
+3. **AMPA-LIVRO pausado** até ordem explícita de retomar — zero arte, print, messenger, landing.
+4. **Patroa / auditoria** → cobrar e delegar; agente-pai opera **somente** o que foi pedido nesta mensagem.
+5. **Skills** → ler SKILL.md **on-demand** quando o pedido exigir; não invocar skill “por precaução”.
+
+## Proibido
+
+- Side quests (“já que estou aqui…”).
+- Tool calls exploratórios antes de entender o pedido (exceto 1 read mínimo se ambíguo).
+- Reintroduzir rules/hooks eliminados (`ampa-*-ipad*`, `drive-ipad-sync`, `omniroute-*`, `lei-primaria`, `actionize`, `agent-executes-capture/stop`).
+
+## Exemplos
+
+```
+✅ "Audite rules" → auditoria + lista; zero delete/push
+✅ "Instala skill X global" → só npx skills add X -g -y
+❌ "Como está?" → 12 briefs + landing AMPA não pedidos
+```

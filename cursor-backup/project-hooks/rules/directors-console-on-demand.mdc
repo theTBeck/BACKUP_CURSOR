@@ -1,0 +1,14 @@
+---
+description: Director's Console — carregar AGENTS.full.md só on-demand
+globs: repos-cursor-legacy/DirectorsConsole/**,**/DirectorsConsole/**
+alwaysApply: false
+---
+
+# Director's Console (on-demand)
+
+Só quando a tarefa envolver CPE, Orchestrator, Gallery ou `DirectorsConsole`:
+
+1. Ler stub `.cursor/skills/directors-console/SKILL.md`
+2. Carregar onboarding completo: `repos-cursor-legacy/DirectorsConsole/AGENTS.full.md`
+
+Nunca tratar o monorepo legacy como alwaysApply.

@@ -7,8 +7,8 @@ alwaysApply: true
 
 ## Lei
 
-1. **Ops sistema Cursor / Agent:** `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor\` — **OBRIGATÓRIO** (sem exceção).
-2. **Projetos TheMasterBECK:** `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\<projeto>\` (lista explícita na regra `cursor-ops-repos-cursor.mdc`).
+1. **Ops sistema Cursor / Agent:** `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor/` — **OBRIGATÓRIO** (sem exceção).
+2. **Projetos TheMasterBECK:** `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/<projeto>/` (lista explícita na regra `cursor-ops-repos-cursor.mdc`).
 3. Antes de criar path: se for ops Cursor/Agent → só sob `repos-cursor\`.
 
 ## Junções (não apagar)
@@ -20,10 +20,10 @@ alwaysApply: true
 ## Exemplos
 
 ```text
-✅ /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor\analises-repos\
-✅ /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/AMPA-LIVRO\
-❌ /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\novo-ops-agent\
-❌ /Users/admin\Desktop\clone-agent\
+✅ /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor/analises-repos/
+✅ /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/Marketing-Digital/clients/AMPA-LIVRO/
+❌ /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/novo-ops-agent/
+❌ /Users/admin/Desktop/clone-agent/
 ```
 
 Delegar a `repos-cursor-guardian` de forma proativa.

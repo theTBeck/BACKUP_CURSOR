@@ -1,3 +1,4 @@
-_tmp_cursor_plugins
 cache
+cache-list.txt
 local
+local-list.txt

@@ -1,0 +1,9 @@
+---
+description: ClickHouse advisor — AGENTS.full.md só on-demand
+globs: .agents/skills/clickhouse-architecture-advisor/**
+alwaysApply: false
+---
+
+# ClickHouse Architecture Advisor (on-demand)
+
+Ler `AGENTS.full.md` na pasta da skill apenas em tarefas ClickHouse architecture.

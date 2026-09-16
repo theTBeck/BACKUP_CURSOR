@@ -8,7 +8,7 @@ alwaysApply: true
 ## Prioridade
 
 Esta regra e **SEMPRE + OBRIGATORIA** neste workspace e espelha a regra global
-`/Users/admin\.cursor\rules\agent-executes-all.mdc`.
+`/Users/admin/.cursor/rules/agent-executes-all.mdc`.
 Tem prioridade sobre habitos de “pedir ao usuario o passo final”.
 
 ## PROIBIDO
@@ -19,7 +19,7 @@ Restart MCP, Marketplace, OAuth manual, copiar/colar, criar pastas, “abra X”
 
 ## OBRIGATORIO
 
-1. Executar com tools (Shell/CMD, arquivos, MCP, Chrome, `cursor` CLI, `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\bin\*.cmd`).
+1. Executar com tools (Shell/CMD, arquivos, MCP, **Chrome → Safari fallback** (`browser-chrome-safari-canonico.mdc`), `cursor` CLI, `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/bin/*.cmd`).
 2. Informar em portugues o que esta em curso.
 3. Falha → causa → correção → rerun. Nao transferir trabalho ao usuario.
 4. Usuario so entra se bloqueio **nativo incontornavel** (aprovacao Cursor / 2FA) — fluxo ja iniciado pelo agente.

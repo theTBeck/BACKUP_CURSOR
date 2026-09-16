@@ -1,10 +1,11 @@
 # BACKUP_MANIFEST
 
-- **Date (local):** 2026-08-26 14:51 -0300
-- **Date (UTC):** 2026-08-26T17:51:41Z
-- **Owner:** TheMasterBECK / theTBeck
-- **Repo:** https://github.com/theTBeck/BACKUP_CURSOR (private)
-- **Host path:** `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL\BACKUP_CURSOR`
+- **Date (local):** 2026-09-16 20:30 -0300
+- **Date (UTC):** 2026-09-16T23:30:00Z
+- **Owner:** TheMasterBECK / IA Associados
+- **Repo:** https://github.com/ia-associados/BACKUP-CURSOR-AI-ASSOCIADOS.git
+- **Host path:** `/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/BACKUP_CURSOR`
+- **Platform:** macOS (darwin)
 
 ## Included
 
@@ -12,7 +13,7 @@
 |------|--------|
 | `cursor-backup/rules/` | Global `.mdc` rules |
 | `cursor-backup/agents/` | User agents/subagents |
-| `cursor-backup/hooks/` + `hooks.json` | Global Cursor hooks (autorun + repos-cursor-guard) |
+| `cursor-backup/hooks/` + `hooks.json` | Global Cursor hooks (autorun + repos-cursor-guard + omniroute mac-safe) |
 | `cursor-backup/project-hooks/` | Workspace ops under repos-cursor/.cursor |
 | `cursor-backup/skills-cursor/` | Cursor built-in/agent skills |
 | `cursor-backup/claude-skills/` | User Claude skills |
@@ -20,16 +21,21 @@
 | `cursor-backup/mcp.json` | MCP defs sanitized |
 | `cursor-backup/user/` | settings / keybindings / snippets |
 | `cursor-backup/extensions.txt` | Extension IDs |
+| `cursor-backup/commands/` | Slash commands |
 
 ## Explicitly omitted
 
 - Plaintext API keys / tokens / Bearer values
-- `%APPDATA%\Cursor\User\History`
-- `workspaceStorage`, caches, heapsnapshots
+- History, workspaceStorage, caches, heapsnapshots
 - Plugin binary caches
-- Cloud auth cookies / OAuth token stores
 - `~/.cursor/hooks/state`
 
 ## Security note
 
 Secrets stay as `${env:...}` or `***REDACTED***`. Repo remains private.
+
+## Restore (macOS)
+
+```bash
+bash /Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor/bin/restore-backup-cursor-mac.sh
+```

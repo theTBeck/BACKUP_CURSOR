@@ -1,0 +1,54 @@
+---
+description: Gate Git pós-tarefa longa — subagente git-steward só após aprovação explícita do TheMasterBECK
+alwaysApply: true
+---
+
+# Git Alignment Gate (pós-tarefa)
+
+## Objetivo
+
+Após concluir **tarefa longa** ou entrega com **código acima de médio**, alinhar repositório **local + GitHub** — somente com **aprovação explícita** do TheMasterBECK antes de qualquer comando Git.
+
+## Supervisor
+
+- **Executor:** subagente `@git-steward`
+- **Conformidade:** `@patroa` pode auditar se o gate foi oferecido quando aplicável
+
+## Quando disparar (fim da tarefa)
+
+Oferecer o gate quando **qualquer** condição for verdadeira:
+
+1. Processo multi-step (3+ passos operacionais ou tool calls substanciais)
+2. Diff estimado **> ~150 linhas** ou **≥ 5 arquivos** de código/config alterados
+3. Scaffold, refactor amplo, migração, ou setup de repo novo
+4. TheMasterBECK pediu explicitamente commit/push/sync
+
+**Não disparar** para: perguntas, auditoria read-only, typos de 1 linha, ou tarefa encerrada sem mudanças no working tree.
+
+## Obrigatório antes de executar Git
+
+1. **Informar** em português: repo(s) afetado(s), branch, `git status` resumido, escopo do commit proposto
+2. **Perguntar** ao TheMasterBECK com opções claras (ex.: aprovar commit+push / só commit local / pular / revisar diff)
+3. **Aguardar** resposta explícita — **proibido** `commit`, `push`, `pull`, `init`, `clone`, force, ou alterar remotes sem OK
+
+Isto **complementa** (não revoga) a regra global: commits só com pedido ou aprovação neste gate.
+
+## Quem executa
+
+- Agente pai ou `@orchestrator`: ao encerrar tarefa elegível, **delegar** `@git-steward` com contexto (paths, objetivo da tarefa, repo root)
+- `@git-steward`: monta plano, pergunta ao user, executa Git/`gh` **após** aprovação
+
+## Proibido
+
+- Push `--force` em `main`/`master` sem aviso e OK explícito
+- `--no-verify` / pular hooks sem pedido do user
+- Commitar `.env`, tokens, credenciais — bloquear e avisar rotação
+- Git em paths fora do escopo da tarefa ou fora das regras `workspace-root` / `repos-cursor`
+
+## Exemplo
+
+```text
+✅ Tarefa longa concluída → resumo + "Quer que o @git-steward alinhe Git (status → commit → push)?"
+✅ User: "sim, push" → git-steward executa
+❌ Tarefa longa → git commit/push silencioso sem perguntar
+```

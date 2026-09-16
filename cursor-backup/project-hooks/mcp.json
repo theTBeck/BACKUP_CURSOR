@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "graft": {
+      "command": "/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor/.cursor/graft-mcp.sh",
+      "args": []
+    }
+  }
+}

@@ -1,0 +1,15 @@
+---
+description: Conecta o projeto Bravector ao catálogo Amazing Digital Cinema (on-demand).
+globs: bravector/**
+alwaysApply: false
+---
+
+# Bravector — Amazing Digital Cinema
+
+Ao trabalhar em `bravector/` (campanhas, roteiros, pós, entrega audiovisual):
+
+1. Carregar skill **`bravector-amazing-digital-cinema`** (`.cursor/skills/bravector-amazing-digital-cinema/SKILL.md`).
+2. Consultar o catálogo em `/Users/admin/.claude/skills/amazing-digital-cinema/README.md` — não inventar ferramentas/URLs fora da lista.
+3. Ops e paths: `repos-cursor/ops/bravector/amazing-digital-cinema-connection.md`.
+
+Não substitui claims MSD, `brand-guide/` nem `veterinarian-helper`.
