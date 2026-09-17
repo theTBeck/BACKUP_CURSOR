@@ -1,13 +1,8 @@
 {
   "mcpServers": {
     "github": {
-      "url": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "Authorization": "Bearer ${env:GITHUB_TOKEN}",
-        "X-MCP-Toolsets": "default,actions,code_security,dependabot,notifications,discussions,projects,labels",
-        "X-MCP-Insiders": "true",
-        "X-MCP-Features": "remote_mcp_ui_apps"
-      }
+      "command": "/Users/admin/Documents/INTELIGENCIA-ARTIFICIAL/Thiago-Beck/repos-cursor/.cursor/github-mcp.sh",
+      "args": []
     },
     "chrome-devtools": {
       "command": "pnpm",
